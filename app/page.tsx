@@ -1,248 +1,54 @@
+"use client";
+
+import { useState } from "react";
 import {
-  ArrowDownRight,
-  ArrowUpRight,
-  Bot,
-  Braces,
-  BriefcaseBusiness,
-  Building2,
-  ChartLine,
-  Cloud,
-  CodeXml,
-  Database,
-  FileSpreadsheet,
-  GraduationCap,
-  LaptopMinimal,
-  LayoutGrid,
-  Mail,
-  MapPin,
-  ShieldCheck,
-  University,
-  Wrench,
+  ArrowDownRight, ArrowUpRight, BarChart3, BriefcaseBusiness, Building2,
+  ChartNoAxesCombined, ChevronDown, Cloud, Code2, Database, FileSpreadsheet,
+  GraduationCap, Mail, MapPin, ShieldCheck, Wrench, Workflow,
 } from "lucide-react";
 
+const capabilities = [
+  { id:"CAP-01", title:"Insurance Analytics", text:"Underwriting, claims, pricing and portfolio intelligence designed around the decisions insurance teams make.", items:["Risk scoring","Loss ratios","Reserve adequacy","Claims leakage"] },
+  { id:"CAP-02", title:"Business Intelligence", text:"Decision-ready reporting that turns fragmented operational data into a clear and defensible view of performance.", items:["Power BI","Executive KPIs","Data validation","Reporting workflows"] },
+  { id:"CAP-03", title:"Risk & Governance", text:"Controls, evidence and reporting structures that make analytical decisions explainable, traceable and audit-ready.", items:["Risk registers","Control evidence","Compliance reporting","Data quality"] },
+  { id:"CAP-04", title:"Data Operations", text:"Reliable data processes across CRM, higher education, nonprofit advancement and enterprise platforms.", items:["Salesforce","Ellucian Colleague","Raiser's Edge","Informer"] },
+];
+
 const projects = [
-  {
-    number: "01",
-    title: "Aegis Underwriting Command Center",
-    category: "Insurance Analytics",
-    description:
-      "A multi-line P&C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.",
-    tags: ["Risk Scoring", "Pricing Analytics", "P&C Insurance"],
-    href: "https://aegis-underwriting-command-center.vercel.app",
-    image: "/aegis-underwriting-cover.png",
-  },
-  {
-    number: "02",
-    title: "Aegis Claims Intelligence Center",
-    category: "Claims Operations",
-    description:
-      "An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.",
-    tags: ["Claims Analytics", "Fraud Indicators", "Reserve Monitoring"],
-    href: "https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/",
-    image: "/aegis-claims-cover.png",
-  },
-  {
-    number: "03",
-    title: "Aegis Evidence Studio",
-    category: "Governance & Compliance",
-    description:
-      "An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.",
-    tags: ["NIST", "ISO 27001", "SOC 2", "SOX", "HIPAA", "GDPR", "COBIT"],
-    href: "https://aegis-evidence-studio-tppi.vercel.app",
-  },
+  { id:"PRJ-01", status:"LIVE", type:"UNDERWRITING INTELLIGENCE", title:"Aegis Underwriting Command Center", href:"https://aegis-underwriting-command-center.vercel.app/", summary:"A multi-line P&C decision platform connecting submission risk, pricing, expected loss and underwriting disposition to portfolio outcomes.", challenge:"Underwriters need a consolidated view of risk signals without losing the reasoning behind each decision.", solution:"Designed an executive portfolio layer and risk-level workflow spanning Auto, Homeowners, Commercial Property, General Liability and Workers’ Compensation.", outcome:"A clear operating view of submissions, approval rate, referral pressure, indicated premium, expected loss ratio and risk concentration.", metrics:["5 P&C lines","1,900 evaluated risks","Portfolio-level KPIs"], tone:"blue" },
+  { id:"PRJ-02", status:"LIVE", type:"CLAIMS OPERATIONS", title:"Aegis Claims Intelligence Center", href:"https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/", summary:"An operational claims workspace for severity, reserve adequacy, aging pressure, fraud concentration and leakage exposure.", challenge:"Claims leaders need to see which files demand intervention—not merely another claims inventory.", solution:"Organized claim signals into an executive view with aging, reserve, fraud and recoverability indicators tied to action priorities.", outcome:"A concise claims control center highlighting priority files, elevated alerts and avoidable or recoverable loss exposure.", metrics:["Reserve adequacy","Fraud alerts","Leakage exposure"], tone:"rust" },
+  { id:"PRJ-03", status:"LIVE", type:"GOVERNANCE & EVIDENCE", title:"Aegis Evidence Studio", href:"https://aegis-evidence-studio-tppi.vercel.app/", summary:"An audit-ready evidence environment linking business decisions, rule versions, cloud controls and policy mappings.", challenge:"Operational decisions and control evidence often live in separate systems, weakening traceability during review.", solution:"Created a unified evidence model across NIST, ISO 27001, SOC 2, SOX, HIPAA, GDPR and COBIT.", outcome:"A structured chain from business decision to rule version, control evidence and governing framework.", metrics:["7 frameworks","5 control engines","Audit-ready trail"], tone:"teal" },
+  { id:"PRJ-04", status:"MODEL", type:"PRICING ANALYTICS", title:"Insurance Pricing & Loss-Ratio Model", summary:"A pricing analysis model that evaluates premium adequacy, expected loss and portfolio segments requiring corrective action.", challenge:"Pricing reviews need to separate profitable growth from premium that is insufficient for the underlying loss exposure.", solution:"Structured an analytical workflow around earned premium, incurred loss, exposure, frequency, severity and modeled loss ratio.", outcome:"A decision framework for identifying segments to retain, reprice, review or exit.", metrics:["Loss-ratio analysis","Scenario testing","Segment actions"], tone:"gold" },
+  { id:"PRJ-05", status:"NEW", type:"CLIMATE RISK MODELING", title:"Climate Risk Loss Intelligence", summary:"A Python and Next.js scenario platform estimating economic losses from event severity, duration, affected population, preparedness and response time.", challenge:"Climate-event data is difficult to translate into transparent operational and financial scenarios.", solution:"Built a reproducible synthetic dataset and compared Linear Regression, Random Forest and Gradient Boosting models.", outcome:"An interactive scenario lab that communicates predicted loss, confidence range, exposure ratio and leading loss drivers.", metrics:["5,000 synthetic events","3 models compared","Interactive scenarios"], tone:"green" },
 ];
 
 const experience = [
-  {
-    dates: "Jun 2026 — Aug 2026",
-    role: "Annual Fund & Database Specialist Intern",
-    organization: "The Salvation Army – Southern New England Division | Hartford, CT",
-    details: [
-      "Managed divisional donor data integrity across Salesforce and Raiser's Edge gift entry, reconciliation, reporting, and maintaining audit-ready records for the Advancement team.",
-      "Partnered with IT to connect Salesforce and Raiser's Edge data into Power BI and Excel reporting workflows, giving leadership up-to-date visibility into donor giving and improving reconciliation efficiency.",
-    ],
-  },
-  {
-    dates: "Apr 2025 — May 2026",
-    role: "Research Assistant – Office of Institutional Research & Strategy",
-    organization: "Quinnipiac University | Hamden, CT",
-    details: [
-      "Standardized compliance documentation and supported federal regulatory submissions (Integrated Postsecondary Education Data System (IPEDS), National Student Loan Data System (NSLDS), and Financial Value Transparency Reporting) by generating and auditing reporting extracts via Informer.",
-      "Consolidated enrollment, academic records, and financial aid data across Ellucian Colleague for 9,200+ students, structuring validated datasets to power institutional dashboards and official reporting.",
-    ],
-  },
-  {
-    dates: "Jan 2023 — Dec 2024",
-    role: "Client Solutions Specialist",
-    organization: "Zimbabwe Insurance Brokers | Harare, Zimbabwe",
-    details: [
-      "Analyzed client risk profiles, exposure data, and claims histories in Excel and evaluated market options to support coverage structuring, pricing, and insurer/reinsurer negotiations.",
-      "Leveraged Salesforce and HubSpot CRM data to identify prospects and track business development, building pipeline dashboards and KPI reporting on conversion rates and revenue forecasts.",
-    ],
-  },
-  {
-    dates: "Nov 2020 — Dec 2022",
-    role: "Claims Analyst",
-    organization: "First Mutual Holdings | Harare, Zimbabwe",
-    details: [
-      "Analyzed claims data and loss drivers across auto, liability, and property portfolios to identify subrogation opportunities and support settlement and reserve decisions.",
-      "Reported on claims cycle time, loss ratios, reserve adequacy, and adjuster performance using Power BI dashboards and SAP/Excel data, partnering with Underwriting, Legal, and Finance on risk and claims-handling strategy.",
-    ],
-  },
+  { rev:"R4", period:"JUN–AUG 2026", place:"Hartford, CT", role:"Annual Fund & Database Specialist Intern", org:"The Salvation Army – Southern New England Division", points:["Managed donor-data integrity across Salesforce and Raiser's Edge gift entry, reconciliation and reporting.","Connected advancement data to Power BI and Excel reporting workflows for leadership visibility."] },
+  { rev:"R3", period:"APR 2025–MAY 2026", place:"Hamden, CT", role:"Research Assistant – Institutional Research & Strategy", org:"Quinnipiac University", points:["Supported IPEDS, NSLDS and Financial Value Transparency reporting through audited Informer extracts.","Consolidated enrollment, academic and financial-aid data for 9,200+ students into validated reporting datasets."] },
+  { rev:"R2", period:"JAN 2023–DEC 2024", place:"Harare, Zimbabwe", role:"Client Solutions Specialist", org:"Zimbabwe Insurance Brokers", points:["Analyzed risk profiles, exposure data and claims histories to support coverage, pricing and market negotiations.","Built CRM pipeline and KPI reporting across Salesforce and HubSpot data."] },
+  { rev:"R1", period:"NOV 2020–DEC 2022", place:"Harare, Zimbabwe", role:"Claims Analyst", org:"First Mutual Holdings", points:["Analyzed loss drivers across auto, liability and property portfolios to support settlement, reserve and subrogation decisions.","Reported claims cycle time, loss ratios, reserve adequacy and adjuster performance using Power BI, SAP and Excel."] },
 ];
 
-const technicalSkills = [
-  { label: "Data Analysis & Manipulation", icon: CodeXml },
-  { label: "Database Management", icon: Database },
-  { label: "Data Visualization", icon: ChartLine },
-  { label: "Machine Learning", icon: Bot },
-  { label: "Cloud Computing", icon: Cloud },
-];
+export default function Home(){
+  const [open,setOpen]=useState<string|null>("PRJ-01");
+  return <main id="top">
+    <header className="site-header"><a className="brand" href="#top"><span>RM</span><b>RYAN MAKAMBA</b><small>DECISION INTELLIGENCE PORTFOLIO</small></a><nav>{[["01","About"],["02","Capabilities"],["03","Projects"],["04","Experience"],["05","Credentials"],["06","Contact"]].map(([n,x])=><a key={n} href={`#${x.toLowerCase()}`}><i>{n}</i>{x}</a>)}</nav><a className="header-link" href="/Ryan-Makamba-Resume.pdf" target="_blank">RESUME <ArrowUpRight/></a></header>
 
-const tools = [
-  { label: "CRM & Enterprise Platforms", value: "Salesforce, HubSpot", icon: Building2 },
-  { label: "Higher Ed Systems", value: "Ellucian Colleague (SIS), Informer (Reporting)", icon: University },
-  { label: "Donor Database Systems", value: "Raiser's Edge", icon: Database },
-  { label: "Power BI", icon: LayoutGrid },
-  { label: "Excel", icon: FileSpreadsheet },
-  { label: "SQL", icon: Database },
-  { label: "Python", icon: Braces },
-];
+    <section className="hero"><div className="drawing-line"><span>PORTFOLIO</span><b>DATA / RISK / OPERATIONS</b><span>ISSUED 2026</span></div><p className="kicker">DATA ANALYTICS · RISK &amp; INSURANCE · BUSINESS OPERATIONS</p><h1>Turning complex data into<br/><em>clear business decisions.</em></h1><p className="hero-summary">I build business intelligence solutions that connect analytical rigor with the realities of underwriting, claims, regulatory reporting and operational performance.</p><div className="hero-actions"><a href="#projects">VIEW PROJECTS <ArrowDownRight/></a><a href="mailto:ryanmakamba@gmail.com">LET&apos;S CONNECT <ArrowUpRight/></a></div><div className="hero-grid"><div><small>LOCATION</small><b>New Haven, Connecticut</b></div><div><small>FOCUS</small><b>Applied AI &amp; Business Analytics</b></div><div><small>STATUS</small><b><i/> Open to analytical opportunities</b></div></div></section>
 
-export default function Home() {
-  return (
-    <main>
-      <header className="site-header">
-        <a className="monogram" href="#top" aria-label="Ryan Makamba home">RM</a>
-        <nav aria-label="Primary navigation">
-          <a href="#work">View My Work</a>
-          <a href="#experience">Experience</a>
-          <a href="#about">About</a>
-        </nav>
-        <a className="header-contact" href="mailto:ryanmakamba@gmail.com">
-          Let’s connect <ArrowUpRight />
-        </a>
-      </header>
+    <section className="sheet" id="about"><Title no="01" title="ABOUT" detail="PROFESSIONAL PROFILE"/><div className="about-layout"><h2>Risk knowledge.<br/>Analytical discipline.<br/>Operational perspective.</h2><div><p className="lead">A Data Analyst dedicated to developing business intelligence solutions that leverage best-practice technologies to deliver data-driven insights.</p><p>My work spans insurance, higher education and nonprofit operations. That range helps me understand not only what the data says, but how the resulting decision affects customers, controls, reporting teams and business performance.</p><div className="stats"><div><strong>9,200+</strong><span>student records supported</span></div><div><strong>5</strong><span>P&amp;C lines modeled</span></div><div><strong>4</strong><span>operating environments</span></div></div></div></div></section>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> New Haven, Connecticut</p>
-          <h1>Ryan<br />Makamba</h1>
-          <p className="specialization">Data Analytics <i /> Risk &amp; Insurance <i /> Business Operations</p>
-          <p className="intro">
-            A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies to deliver data-driven insights. With over 4+ years of experience in data analytics and reporting, statistical analysis and business intelligence across insurance, higher education, and nonprofit operations.
-          </p>
-          <div className="hero-actions">
-            <a className="primary-button" href="#work">View My Work <ArrowDownRight /></a>
-            <a className="text-link resume-link" href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">
-              Resume <ArrowUpRight />
-            </a>
-          </div>
-        </div>
-        <aside className="hero-note">
-          <span>Current focus</span>
-          <strong>Applied AI &amp;<br />Business Analytics</strong>
-          <p>Building practical systems for risk, reporting and operational intelligence.</p>
-        </aside>
-      </section>
+    <section className="sheet shaded" id="capabilities"><Title no="02" title="CAPABILITIES" detail="ANALYTICAL SYSTEMS"/><div className="cap-grid">{capabilities.map((c,i)=><article key={c.id}><div className="cap-head"><span>{c.id}</span>{[ShieldCheck,BarChart3,Workflow,Database].map((Icon,j)=>j===i?<Icon key={j}/>:null)}</div><h3>{c.title}</h3><p>{c.text}</p><ul>{c.items.map(x=><li key={x}>{x}</li>)}</ul></article>)}</div></section>
 
-      <section className="work section" id="work">
-        <div className="section-heading">
-          <p className="eyebrow">Featured Projects</p>
-          <h2>Systems built around<br />real business decisions.</h2>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project" key={project.title}>
-              <div className="project-index">{project.number}</div>
-              <div className="project-body">
-                <p className="project-category">{project.category}</p>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <a href={project.href} target="_blank" rel="noreferrer">Open live project <ArrowUpRight /></a>
-              </div>
-              {project.image ? (
-                <a className="project-visual" href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`}>
-                  <span className="preview-canvas">
-                    <img src={project.image} alt={`${project.title} interface preview`} />
-                  </span>
-                </a>
-              ) : (
-                <div className="project-visual evidence-visual" aria-hidden="true">
-                  <ShieldCheck />
-                  <span>CONTROL<br />EVIDENCE</span>
-                  <small>Traceable · Governed · Audit-ready</small>
-                </div>
-              )}
-            </article>
-          ))}
-        </div>
-      </section>
+    <section className="sheet" id="projects"><Title no="03" title="PROJECTS" detail="SELECTED DECISION SYSTEMS"/><p className="section-intro">A portfolio built around the decisions analysts, underwriters, claims leaders and reporting teams need to make.</p><div className="project-stack">{projects.map(p=><article className={`project ${p.tone}`} key={p.id}><div className="project-meta"><span>{p.id}</span><b>{p.type}</b><i>{p.status}</i></div><div className="project-main"><div className="project-copy"><h3>{p.title}</h3><p>{p.summary}</p><div className="metric-tags">{p.metrics.map(m=><span key={m}>{m}</span>)}</div></div><div className="project-schematic" aria-hidden="true"><div className="schema-top"><span>{p.id}</span><i/></div><div className="schema-chart"><b/><b/><b/><b/><b/></div><div className="schema-cards"><i/><i/><i/></div></div></div><button aria-expanded={open===p.id} onClick={()=>setOpen(open===p.id?null:p.id)}>CASE STUDY <ChevronDown/></button>{open===p.id&&<div className="case"><div><small>BUSINESS QUESTION</small><p>{p.challenge}</p></div><div><small>APPROACH</small><p>{p.solution}</p></div><div><small>DECISION VALUE</small><p>{p.outcome}</p></div>{p.href&&<a href={p.href} target="_blank" rel="noreferrer">OPEN LIVE PROJECT <ArrowUpRight/></a>}</div>}</article>)}</div></section>
 
-      <section className="experience section" id="experience">
-        <div className="section-heading compact">
-          <p className="eyebrow">Experience</p>
-          <h2>Analytics grounded<br />in operations.</h2>
-        </div>
-        <div className="timeline">
-          {experience.map((item) => (
-            <article key={item.role}>
-              <time>{item.dates}</time>
-              <div>
-                <h3>{item.role}</h3>
-                <h4>{item.organization}</h4>
-                <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+    <section className="sheet dark" id="experience"><Title no="04" title="EXPERIENCE" detail="REVISION HISTORY"/><div className="experience-table"><div className="exp-header"><span>REV</span><span>PERIOD / LOCATION</span><span>ROLE &amp; SCOPE</span></div>{experience.map(x=><article key={x.rev}><span className="rev">{x.rev}</span><div className="period"><b>{x.period}</b><small>{x.place}</small></div><div><h3>{x.role}</h3><h4>{x.org}</h4><ul>{x.points.map(p=><li key={p}>{p}</li>)}</ul></div></article>)}</div></section>
 
-      <section className="about section" id="about">
-        <div className="about-copy">
-          <p className="eyebrow">About</p>
-          <h2>Risk knowledge.<br />Analytical discipline.<br />Operational perspective.</h2>
-          <p>
-            My background spans insurance underwriting and claims, institutional research, regulatory reporting and nonprofit data operations. That range helps me see both the numbers and the decisions behind them.
-          </p>
-          <div className="contact-row">
-            <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email</a>
-            <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer"><ArrowUpRight /> LinkedIn</a>
-          </div>
-        </div>
-        <div className="credentials">
-          <div className="credential"><GraduationCap /><span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span></div>
-          <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
-          <div className="skills-grid" aria-label="Skills and tools">
-            <article className="skills-card technical-card">
-              <h3><LaptopMinimal /> Technical Skills</h3>
-              <ul>
-                {technicalSkills.map(({ label, icon: Icon }) => (
-                  <li key={label}><Icon /><span>{label}</span></li>
-                ))}
-              </ul>
-            </article>
-            <article className="skills-card tools-card">
-              <h3><Wrench /> Tools</h3>
-              <ul>
-                {tools.map(({ label, value, icon: Icon }) => (
-                  <li key={label}>
-                    <Icon />
-                    <span>{value ? <>{label}: {value}</> : label}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section className="sheet" id="credentials"><Title no="05" title="CREDENTIALS" detail="EDUCATION & TOOLKIT"/><div className="credentials-grid"><div className="education"><h3>EDUCATION</h3><article><GraduationCap/><div><b>MS Business Analytics</b><span>Quinnipiac University · Expected December 2026</span></div></article><article><BriefcaseBusiness/><div><b>BSc Risk Management &amp; Insurance</b><span>National University of Science and Technology · 2022</span></div></article></div><div className="toolkit"><h3>TECHNICAL SKILLS</h3>{[[Code2,"Data Analysis & Manipulation"],[Database,"Database Management"],[ChartNoAxesCombined,"Data Visualization"],[BarChart3,"Machine Learning"],[Cloud,"Cloud Computing"]].map(([Icon,label]:any)=><p key={label}><Icon/>{label}</p>)}</div><div className="toolkit tools"><h3>TOOLS &amp; SYSTEMS</h3>{[[Building2,"Salesforce · HubSpot"],[Database,"Ellucian Colleague · Informer · Raiser's Edge"],[ChartNoAxesCombined,"Power BI"],[FileSpreadsheet,"Excel"],[Database,"SQL"],[Code2,"Python"]].map(([Icon,label]:any)=><p key={label}><Icon/>{label}</p>)}</div></div></section>
 
-      <footer>
-        <div><span className="footer-mark">RM</span><p>Ryan Makamba<br /><small>Data Analytics | Risk &amp; Insurance | Business Operations</small></p></div>
-        <p><MapPin /> New Haven, CT</p>
-        <p>© 2026 Ryan Makamba. All rights reserved.</p>
-      </footer>
-    </main>
-  );
+    <section className="contact" id="contact"><Title no="06" title="CONTACT" detail="OPEN CHANNEL"/><div><p>Open to data analytics, insurance analytics, risk and business intelligence opportunities.</p><a href="mailto:ryanmakamba@gmail.com"><Mail/> RYANMAKAMBA@GMAIL.COM</a><a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank"><ArrowUpRight/> LINKEDIN</a></div></section>
+    <footer><div><b>DRAWN BY</b><span>RYAN MAKAMBA</span></div><div><b>LOCATION</b><span><MapPin/> NEW HAVEN, CT</span></div><div><b>SHEET</b><span>01 OF 01</span></div><div><b>REV</b><span>2026</span></div></footer>
+  </main>
 }
+
+function Title({no,title,detail}:{no:string,title:string,detail:string}){return <div className="title-block"><div><small>SECTION</small><b>{no} {title}</b></div><div><small>DETAIL</small><b>{detail}</b></div><div><small>REV</small><b>A</b></div></div>}
