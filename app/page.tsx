@@ -136,18 +136,22 @@ const tools = [
 ];
 
 const featuredTools = [
-  { label: "Power BI", detail: "Dashboards & DAX", icon: LayoutGrid },
-  { label: "Excel", detail: "Analysis & Modeling", icon: FileSpreadsheet },
-  { label: "SQL", detail: "Data Querying", icon: Database },
-  { label: "Python", detail: "Analytics & ML", icon: Braces },
-  { label: "Salesforce", detail: "CRM & Pipeline", icon: Building2 },
-  { label: "HubSpot", detail: "CRM & Growth", icon: Building2 },
-  { label: "Raiser's Edge", detail: "Donor Data", icon: Database },
-  { label: "Ellucian Colleague", detail: "Student Information", icon: University },
-  { label: "Informer", detail: "Institutional Reporting", icon: ChartLine },
-  { label: "MLflow", detail: "Model Tracking", icon: Bot },
-  { label: "Scikit-learn", detail: "Machine Learning", icon: CodeXml },
-  { label: "XGBoost", detail: "Predictive Modeling", icon: Bot },
+  { label: "Power BI", detail: "Dashboards & DAX", logo: "https://cdn.simpleicons.org/powerbi" },
+  { label: "Excel", detail: "Analysis & Modeling", logo: "https://cdn.simpleicons.org/microsoftexcel" },
+  { label: "SQL", detail: "Data Querying", logo: "https://cdn.simpleicons.org/postgresql" },
+  { label: "Python", detail: "Analytics & ML", logo: "https://cdn.simpleicons.org/python" },
+  { label: "Salesforce", detail: "CRM & Pipeline", logo: "https://cdn.simpleicons.org/salesforce" },
+  { label: "HubSpot", detail: "CRM & Growth", logo: "https://cdn.simpleicons.org/hubspot" },
+  { label: "ChatGPT", detail: "Research & Analysis", logo: "https://cdn.simpleicons.org/openai" },
+  { label: "Claude", detail: "AI-Assisted Workflows", logo: "https://cdn.simpleicons.org/anthropic" },
+  { label: "Canva", detail: "Visual Communication", logo: "https://cdn.simpleicons.org/canva" },
+  { label: "Zoho Desk", detail: "Customer Support", logo: "https://cdn.simpleicons.org/zoho" },
+  { label: "GitHub", detail: "Version Control", logo: "https://cdn.simpleicons.org/github" },
+  { label: "Microsoft Teams", detail: "Collaboration", logo: "https://cdn.simpleicons.org/microsoftteams" },
+  { label: "Figma", detail: "Interface Design", logo: "https://cdn.simpleicons.org/figma" },
+  { label: "Slack", detail: "Team Communication", logo: "https://cdn.simpleicons.org/slack" },
+  { label: "MLflow", detail: "Model Tracking", logo: "https://cdn.simpleicons.org/mlflow" },
+  { label: "Scikit-learn", detail: "Machine Learning", logo: "https://cdn.simpleicons.org/scikitlearn" },
 ];
 
 export default function Home() {
@@ -245,12 +249,12 @@ export default function Home() {
           <p>From source systems and analysis to reporting and model governance, these are the tools I use to move work from question to usable insight.</p>
         </div>
         <div className="tool-marquees" aria-label="Analytics and business technology">
-          {[featuredTools.slice(0, 6), featuredTools.slice(6)].map((row, rowIndex) => (
+          {[featuredTools.slice(0, 8), featuredTools.slice(8)].map((row, rowIndex) => (
             <div className={`tool-marquee ${rowIndex === 1 ? "reverse" : ""}`} key={rowIndex}>
               <div className="tool-track">
-                {[...row, ...row].map(({ label, detail, icon: Icon }, index) => (
+                {[...row, ...row].map(({ label, detail, logo }, index) => (
                   <article className="tool-chip" key={`${label}-${index}`} aria-hidden={index >= row.length}>
-                    <span className="tool-icon"><Icon /></span>
+                    <span className="tool-icon"><img src={logo} alt="" loading="lazy" /></span>
                     <span><b>{label}</b><small>{detail}</small></span>
                   </article>
                 ))}
