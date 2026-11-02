@@ -81,7 +81,7 @@ const projects: Project[] = [
 const experience = [
   {
     dates: "Jun 2026 — Aug 2026",
-    role: "Annual Fund & Database Specialist Intern",
+    role: "Fundraising Data & Reporting Analyst Intern",
     organization: "The Salvation Army – Southern New England Division | Hartford, CT",
     details: [
       "Managed divisional donor data integrity across Salesforce and Raiser's Edge gift entry, reconciliation, reporting, and maintaining audit-ready records for the Advancement team.",
@@ -90,7 +90,7 @@ const experience = [
   },
   {
     dates: "Apr 2025 — May 2026",
-    role: "Research Assistant – Office of Institutional Research & Strategy",
+    role: "Research Assistant – Office of Institutional Research & Assessment",
     organization: "Quinnipiac University | Hamden, CT",
     details: [
       "Standardized compliance documentation and supported federal regulatory submissions (Integrated Postsecondary Education Data System (IPEDS), National Student Loan Data System (NSLDS), and Financial Value Transparency Reporting) by generating and auditing reporting extracts via Informer.",
