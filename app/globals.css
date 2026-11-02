@@ -41,9 +41,12 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .project-body h3 { font-family:Georgia,serif; font-weight:500; font-size:clamp(2rem,3vw,3.3rem); line-height:1.04; margin:12px 0 20px; }
 .project-body { max-width:780px; }
 .project-body>p { color:var(--muted); line-height:1.65; font-size:1rem; }
+.project-points { color:var(--muted); line-height:1.7; margin:20px 0 0; padding-left:1.15rem; font-size:.96rem; }
+.project-points li + li { margin-top:10px; }
 .tags { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; }
 .tags span { border:1px solid var(--line); padding:7px 10px; font-size:.72rem; font-weight:700; }
 .project-body a { display:inline-flex; gap:8px; align-items:center; color:var(--rust); font-size:.86rem; font-weight:800; }
+.research-status { color:var(--rust); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; font-weight:800; }
 .project-visual { grid-column:2; width:100%; padding:clamp(10px,1.4vw,18px); background:#eceff2; display:block; overflow:hidden; border:1px solid #d8dde3; border-radius:10px; box-shadow:0 22px 55px rgba(16,35,63,.14); }
 .preview-canvas { background:#fff; display:block; overflow:hidden; border:1px solid #d9dde2; border-radius:5px; box-shadow:0 8px 22px rgba(16,35,63,.08); }
 .project-visual img { display:block; width:100%; height:auto; object-fit:contain; object-position:center; transition:transform .35s ease; }
@@ -52,6 +55,10 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .evidence-visual svg { width:48px; height:48px; color:#d88768; }
 .evidence-visual span { font-family:Georgia,serif; font-size:clamp(2rem,4vw,4rem); line-height:.92; letter-spacing:-.02em; }
 .evidence-visual small { color:#aeb9c7; letter-spacing:.08em; text-transform:uppercase; font-size:.67rem; }
+.thesis-visual { min-height:360px; background:linear-gradient(145deg,#10233f 0%,#1f5c78 100%); color:white; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; }
+.thesis-visual svg { width:50px; height:50px; color:#e4a086; }
+.thesis-visual span { font-family:Georgia,serif; font-size:clamp(2rem,4vw,4rem); line-height:.92; letter-spacing:-.02em; }
+.thesis-visual small { color:#d5dee7; letter-spacing:.08em; text-transform:uppercase; font-size:.67rem; }
 
 .experience { background:var(--ink); color:white; display:grid; grid-template-columns:35% 1fr; gap:clamp(50px,8vw,130px); }
 .experience .section-heading { display:block; margin:0; position:sticky; top:130px; align-self:start; }

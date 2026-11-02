@@ -20,7 +20,19 @@ import {
   Wrench,
 } from "lucide-react";
 
-const projects = [
+type Project = {
+  number: string;
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+  href?: string;
+  image?: string;
+  details?: string[];
+  visual?: "evidence" | "thesis";
+};
+
+const projects: Project[] = [
   {
     number: "01",
     title: "Aegis Underwriting Command Center",
@@ -49,6 +61,20 @@ const projects = [
       "An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.",
     tags: ["NIST", "ISO 27001", "SOC 2", "SOX", "HIPAA", "GDPR", "COBIT"],
     href: "https://aegis-evidence-studio-tppi.vercel.app",
+    visual: "evidence",
+  },
+  {
+    number: "04",
+    title: "Balancing Predictive Performance and Explainability in Insurance Underwriting",
+    category: "Master’s Thesis",
+    description:
+      "Research examining how underwriting models can improve predictive performance while remaining transparent, fair and suitable for defensible insurance decisions.",
+    details: [
+      "Comparing traditional statistical and machine-learning underwriting models across predictive performance, calibration, fairness and interpretability.",
+      "Using Python, Scikit-learn and XGBoost to develop and compare models, MLflow to track experiments and model versions, and SHAP to assess risk drivers, transparency and fairness.",
+    ],
+    tags: ["Python", "Scikit-learn", "XGBoost", "MLflow", "SHAP"],
+    visual: "thesis",
   },
 ];
 
@@ -159,15 +185,30 @@ export default function Home() {
                 <p className="project-category">{project.category}</p>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                {project.details ? (
+                  <ul className="project-points">
+                    {project.details.map((detail) => <li key={detail}>{detail}</li>)}
+                  </ul>
+                ) : null}
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <a href={project.href} target="_blank" rel="noreferrer">Open live project <ArrowUpRight /></a>
+                {project.href ? (
+                  <a href={project.href} target="_blank" rel="noreferrer">Open live project <ArrowUpRight /></a>
+                ) : (
+                  <span className="research-status">Graduate research · In progress</span>
+                )}
               </div>
-              {project.image ? (
+              {project.image && project.href ? (
                 <a className="project-visual" href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`}>
                   <span className="preview-canvas">
                     <img src={project.image} alt={`${project.title} interface preview`} />
                   </span>
                 </a>
+              ) : project.visual === "thesis" ? (
+                <div className="project-visual thesis-visual" aria-hidden="true">
+                  <Bot />
+                  <span>PREDICTIVE<br />MODELING</span>
+                  <small>Performance · Fairness · Explainability</small>
+                </div>
               ) : (
                 <div className="project-visual evidence-visual" aria-hidden="true">
                   <ShieldCheck />
