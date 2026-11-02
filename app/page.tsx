@@ -136,22 +136,22 @@ const tools = [
 ];
 
 const featuredTools = [
-  { label: "Power BI", detail: "Dashboards & DAX", logo: "https://cdn.simpleicons.org/powerbi" },
-  { label: "Excel", detail: "Analysis & Modeling", logo: "https://cdn.simpleicons.org/microsoftexcel" },
-  { label: "SQL", detail: "Data Querying", logo: "https://cdn.simpleicons.org/postgresql" },
-  { label: "Python", detail: "Analytics & ML", logo: "https://cdn.simpleicons.org/python" },
-  { label: "Salesforce", detail: "CRM & Pipeline", logo: "https://cdn.simpleicons.org/salesforce" },
-  { label: "HubSpot", detail: "CRM & Growth", logo: "https://cdn.simpleicons.org/hubspot" },
-  { label: "ChatGPT", detail: "Research & Analysis", logo: "https://cdn.simpleicons.org/openai" },
-  { label: "Claude", detail: "AI-Assisted Workflows", logo: "https://cdn.simpleicons.org/anthropic" },
-  { label: "Canva", detail: "Visual Communication", logo: "https://cdn.simpleicons.org/canva" },
-  { label: "Zoho Desk", detail: "Customer Support", logo: "https://cdn.simpleicons.org/zoho" },
-  { label: "GitHub", detail: "Version Control", logo: "https://cdn.simpleicons.org/github" },
-  { label: "Microsoft Teams", detail: "Collaboration", logo: "https://cdn.simpleicons.org/microsoftteams" },
-  { label: "Figma", detail: "Interface Design", logo: "https://cdn.simpleicons.org/figma" },
-  { label: "Slack", detail: "Team Communication", logo: "https://cdn.simpleicons.org/slack" },
-  { label: "MLflow", detail: "Model Tracking", logo: "https://cdn.simpleicons.org/mlflow" },
-  { label: "Scikit-learn", detail: "Machine Learning", logo: "https://cdn.simpleicons.org/scikitlearn" },
+  { label: "Power BI", detail: "Dashboards & DAX", logo: "/logos/powerbi.svg" },
+  { label: "Excel", detail: "Analysis & Modeling", logo: "/logos/microsoftexcel.svg" },
+  { label: "SQL", detail: "Data Querying", logo: "/logos/postgresql.svg" },
+  { label: "Python", detail: "Analytics & ML", logo: "/logos/python.svg" },
+  { label: "Salesforce", detail: "CRM & Pipeline", logo: "/logos/salesforce.svg" },
+  { label: "HubSpot", detail: "CRM & Growth", logo: "/logos/hubspot.svg" },
+  { label: "ChatGPT", detail: "Research & Analysis", logo: "/logos/openai.svg" },
+  { label: "Claude", detail: "AI-Assisted Workflows", logo: "/logos/anthropic.svg" },
+  { label: "Canva", detail: "Visual Communication", logo: "/logos/canva.svg" },
+  { label: "Zoho Desk", detail: "Customer Support", logo: "/logos/zoho.svg" },
+  { label: "GitHub", detail: "Version Control", logo: "/logos/github.svg" },
+  { label: "Microsoft Teams", detail: "Collaboration", logo: "/logos/microsoftteams.svg" },
+  { label: "Figma", detail: "Interface Design", logo: "/logos/figma.svg" },
+  { label: "Slack", detail: "Team Communication", logo: "/logos/slack.svg" },
+  { label: "MLflow", detail: "Model Tracking", logo: "/logos/mlflow.svg" },
+  { label: "Scikit-learn", detail: "Machine Learning", logo: "/logos/scikitlearn.svg" },
 ];
 
 export default function Home() {
