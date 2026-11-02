@@ -135,6 +135,21 @@ const tools = [
   { label: "Python", icon: Braces },
 ];
 
+const featuredTools = [
+  { label: "Power BI", detail: "Dashboards & DAX", icon: LayoutGrid },
+  { label: "Excel", detail: "Analysis & Modeling", icon: FileSpreadsheet },
+  { label: "SQL", detail: "Data Querying", icon: Database },
+  { label: "Python", detail: "Analytics & ML", icon: Braces },
+  { label: "Salesforce", detail: "CRM & Pipeline", icon: Building2 },
+  { label: "HubSpot", detail: "CRM & Growth", icon: Building2 },
+  { label: "Raiser's Edge", detail: "Donor Data", icon: Database },
+  { label: "Ellucian Colleague", detail: "Student Information", icon: University },
+  { label: "Informer", detail: "Institutional Reporting", icon: ChartLine },
+  { label: "MLflow", detail: "Model Tracking", icon: Bot },
+  { label: "Scikit-learn", detail: "Machine Learning", icon: CodeXml },
+  { label: "XGBoost", detail: "Predictive Modeling", icon: Bot },
+];
+
 export default function Home() {
   return (
     <main>
@@ -143,6 +158,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#work">View My Work</a>
           <a href="#experience">Experience</a>
+          <a href="#toolkit">Tools</a>
           <a href="#about">About</a>
         </nav>
         <a className="header-contact" href="mailto:ryanmakamba@gmail.com">
@@ -217,6 +233,29 @@ export default function Home() {
                 </div>
               )}
             </article>
+          ))}
+        </div>
+      </section>
+
+
+      <section className="toolkit section" id="toolkit" aria-labelledby="toolkit-title">
+        <div className="toolkit-heading">
+          <p className="eyebrow">Tools I Work With</p>
+          <h2 id="toolkit-title">Technology that turns<br />data into decisions.</h2>
+          <p>From source systems and analysis to reporting and model governance, these are the tools I use to move work from question to usable insight.</p>
+        </div>
+        <div className="tool-marquees" aria-label="Analytics and business technology">
+          {[featuredTools.slice(0, 6), featuredTools.slice(6)].map((row, rowIndex) => (
+            <div className={`tool-marquee ${rowIndex === 1 ? "reverse" : ""}`} key={rowIndex}>
+              <div className="tool-track">
+                {[...row, ...row].map(({ label, detail, icon: Icon }, index) => (
+                  <article className="tool-chip" key={`${label}-${index}`} aria-hidden={index >= row.length}>
+                    <span className="tool-icon"><Icon /></span>
+                    <span><b>{label}</b><small>{detail}</small></span>
+                  </article>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
