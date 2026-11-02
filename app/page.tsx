@@ -254,7 +254,7 @@ export default function Home() {
               <div className="tool-track">
                 {[...row, ...row].map(({ label, detail, logo }, index) => (
                   <article className="tool-chip" key={`${label}-${index}`} aria-hidden={index >= row.length}>
-                    <span className="tool-icon"><img src={logo} alt="" loading="lazy" /></span>
+                    <span className="tool-icon"><img src={logo} alt="" /></span>
                     <span><b>{label}</b><small>{detail}</small></span>
                   </article>
                 ))}
