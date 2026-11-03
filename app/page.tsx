@@ -2,22 +2,11 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   Bot,
-  Braces,
   BriefcaseBusiness,
-  Building2,
-  ChartLine,
-  Cloud,
-  CodeXml,
-  Database,
-  FileSpreadsheet,
   GraduationCap,
-  LaptopMinimal,
-  LayoutGrid,
   Mail,
   MapPin,
   ShieldCheck,
-  University,
-  Wrench,
 } from "lucide-react";
 
 type Project = {
@@ -115,24 +104,6 @@ const experience = [
       "Reported on claims cycle time, loss ratios, reserve adequacy, and adjuster performance using Power BI dashboards and SAP/Excel data, partnering with Underwriting, Legal, and Finance on risk and claims-handling strategy.",
     ],
   },
-];
-
-const technicalSkills = [
-  { label: "Data Analysis & Manipulation", icon: CodeXml },
-  { label: "Database Management", icon: Database },
-  { label: "Data Visualization", icon: ChartLine },
-  { label: "Machine Learning", icon: Bot },
-  { label: "Cloud Computing", icon: Cloud },
-];
-
-const tools = [
-  { label: "CRM & Enterprise Platforms", value: "Salesforce, HubSpot", icon: Building2 },
-  { label: "Higher Ed Systems", value: "Ellucian Colleague (SIS), Informer (Reporting)", icon: University },
-  { label: "Donor Database Systems", value: "Raiser's Edge", icon: Database },
-  { label: "Power BI", icon: LayoutGrid },
-  { label: "Excel", icon: FileSpreadsheet },
-  { label: "SQL", icon: Database },
-  { label: "Python", icon: Braces },
 ];
 
 const featuredTools = [
@@ -243,10 +214,8 @@ export default function Home() {
 
 
       <section className="toolkit section" id="toolkit" aria-labelledby="toolkit-title">
-        <div className="toolkit-heading">
-          <p className="eyebrow">Tools I Work With</p>
-          <h2 id="toolkit-title">Technology that turns<br />data into decisions.</h2>
-          <p>From source systems and analysis to reporting and model governance, these are the tools I use to move work from question to usable insight.</p>
+        <div className="toolkit-label">
+          <p className="eyebrow" id="toolkit-title">Tools I Work With</p>
         </div>
         <div className="tool-marquees" aria-label="Analytics and business technology">
           {[featuredTools.slice(0, 8), featuredTools.slice(8)].map((row, rowIndex) => (
@@ -298,27 +267,6 @@ export default function Home() {
         <div className="credentials">
           <div className="credential"><GraduationCap /><span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span></div>
           <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
-          <div className="skills-grid" aria-label="Skills and tools">
-            <article className="skills-card technical-card">
-              <h3><LaptopMinimal /> Technical Skills</h3>
-              <ul>
-                {technicalSkills.map(({ label, icon: Icon }) => (
-                  <li key={label}><Icon /><span>{label}</span></li>
-                ))}
-              </ul>
-            </article>
-            <article className="skills-card tools-card">
-              <h3><Wrench /> Tools</h3>
-              <ul>
-                {tools.map(({ label, value, icon: Icon }) => (
-                  <li key={label}>
-                    <Icon />
-                    <span>{value ? <>{label}: {value}</> : label}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
         </div>
       </section>
 
