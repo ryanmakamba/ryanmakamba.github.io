@@ -400,7 +400,7 @@ function startProjectLaunch(link) {
   }, 1000);
 }
 
-document.querySelectorAll('[data-project-live], [data-case-live], [data-case-live-bottom]').forEach(link => {
+document.querySelectorAll('[data-case-live], [data-case-live-bottom]').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
     event.stopPropagation();
