@@ -69,38 +69,38 @@ const experience = [
   {
     dates: "Jun 2026 — Aug 2026",
     role: "Fundraising Data & Reporting Analyst Intern",
-    organization: "The Salvation Army – Southern New England Division | Hartford, CT",
-    details: [
-      "Managed divisional donor data integrity across Salesforce and Raiser's Edge gift entry, reconciliation, reporting, and maintaining audit-ready records for the Advancement team.",
-      "Partnered with IT to connect Salesforce and Raiser's Edge data into Power BI and Excel reporting workflows, giving leadership up-to-date visibility into donor giving and improving reconciliation efficiency.",
-    ],
+    organization: "The Salvation Army – Southern New England Division",
+    location: "Hartford, CT",
+    logo: "https://static-assets.justserve.org/images/bae3b424-344e-4e17-acc9-9aee4b7eb4ec.png",
+    logoAlt: "The Salvation Army logo",
+    logoClass: "salvation-logo",
   },
   {
     dates: "Apr 2025 — May 2026",
     role: "Research Assistant – Office of Institutional Research & Assessment",
-    organization: "Quinnipiac University | Hamden, CT",
-    details: [
-      "Standardized compliance documentation and supported federal regulatory submissions (Integrated Postsecondary Education Data System (IPEDS), National Student Loan Data System (NSLDS), and Financial Value Transparency Reporting) by generating and auditing reporting extracts via Informer.",
-      "Consolidated enrollment, academic records, and financial aid data across Ellucian Colleague for 9,200+ students, structuring validated datasets to power institutional dashboards and official reporting.",
-    ],
+    organization: "Quinnipiac University",
+    location: "Hamden, CT",
+    logo: "/education/quinnipiac-logo.png",
+    logoAlt: "Quinnipiac University logo",
+    logoClass: "quinnipiac-logo",
   },
   {
     dates: "Jan 2023 — Dec 2024",
     role: "Client Solutions Specialist",
-    organization: "Zimbabwe Insurance Brokers | Harare, Zimbabwe",
-    details: [
-      "Analyzed client risk profiles, exposure data, and claims histories in Excel and evaluated market options to support coverage structuring, pricing, and insurer/reinsurer negotiations.",
-      "Leveraged Salesforce and HubSpot CRM data to identify prospects and track business development, building pipeline dashboards and KPI reporting on conversion rates and revenue forecasts.",
-    ],
+    organization: "Zimbabwe Insurance Brokers",
+    location: "Harare, Zimbabwe",
+    logo: "https://lerncoaching-wien.at/wp-content/uploads/2023/10/ZIB-Logo.jpg",
+    logoAlt: "ZIB logo",
+    logoClass: "zib-logo",
   },
   {
     dates: "Nov 2020 — Dec 2022",
     role: "Claims Analyst",
-    organization: "First Mutual Holdings | Harare, Zimbabwe",
-    details: [
-      "Analyzed claims data and loss drivers across auto, liability, and property portfolios to identify subrogation opportunities and support settlement and reserve decisions.",
-      "Reported on claims cycle time, loss ratios, reserve adequacy, and adjuster performance using Power BI dashboards and SAP/Excel data, partnering with Underwriting, Legal, and Finance on risk and claims-handling strategy.",
-    ],
+    organization: "First Mutual Holdings",
+    location: "Harare, Zimbabwe",
+    logo: "https://ihararejobs.com/media/logo/logo_first-mutual-holdings-limited_D.png",
+    logoAlt: "First Mutual Holdings logo",
+    logoClass: "first-mutual-logo",
   },
 ];
 
@@ -220,12 +220,14 @@ export default function Home() {
         <div className="timeline">
           {experience.map((item) => (
             <article key={item.role}>
-              <time>{item.dates}</time>
-              <div>
-                <h3>{item.role}</h3>
-                <h4>{item.organization}</h4>
-                <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              <div className={`experience-logo ${item.logoClass}`}>
+                <img src={item.logo} alt={item.logoAlt} />
               </div>
+              <div className="experience-role">
+                <h3>{item.role}</h3>
+                <h4>{item.organization}<span>{item.location}</span></h4>
+              </div>
+              <time>{item.dates}</time>
             </article>
           ))}
         </div>
