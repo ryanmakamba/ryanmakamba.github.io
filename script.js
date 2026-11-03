@@ -191,3 +191,54 @@ document.querySelectorAll('[data-case-action]').forEach(button => {
     if (tile) openCaseStudy(tile);
   });
 });
+
+
+/* Branded countdown before opening an Aegis dashboard */
+const launchOverlay = document.querySelector('[data-project-launch]');
+const launchCount = document.querySelector('[data-launch-count]');
+const launchName = document.querySelector('[data-launch-name]');
+const launchLinks = [...document.querySelectorAll('.projects-dark a[href*="aegis-"]')];
+let launchTimer;
+
+function replayCountAnimation() {
+  if (reduceMotion || !launchCount) return;
+  launchCount.style.animation = 'none';
+  void launchCount.offsetWidth;
+  launchCount.style.animation = '';
+}
+
+function startProjectLaunch(link) {
+  if (!launchOverlay || !launchCount) return;
+  const destination = link.href;
+  const projectCard = link.closest('.bento-project');
+  const projectName = projectCard?.querySelector('h3')?.textContent?.trim()
+    || document.querySelector('[data-case-title]')?.textContent?.trim()
+    || 'Aegis dashboard';
+
+  clearInterval(launchTimer);
+  launchName.textContent = projectName;
+  launchCount.textContent = '3';
+  launchOverlay.hidden = false;
+  document.body.classList.add('is-launching');
+  replayCountAnimation();
+
+  let value = 3;
+  launchTimer = window.setInterval(() => {
+    value -= 1;
+    if (value > 0) {
+      launchCount.textContent = String(value);
+      replayCountAnimation();
+      return;
+    }
+    window.clearInterval(launchTimer);
+    window.location.assign(destination);
+  }, 1000);
+}
+
+launchLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    startProjectLaunch(link);
+  });
+});
