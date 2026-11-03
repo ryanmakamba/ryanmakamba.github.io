@@ -28,7 +28,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp index.html styles.css script.js _site/
+          cp index.html styles.css script.js preview-underwriting.html preview-claims.html preview-evidence.html _site/
           cp -R public/. _site/
           touch _site/.nojekyll
       - name: Upload artifact
