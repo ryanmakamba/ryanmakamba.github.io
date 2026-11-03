@@ -154,11 +154,96 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <aside className="hero-note">
-          <span>Current focus</span>
-          <strong>Applied AI &amp;<br />Business Analytics</strong>
-          <p>Building practical systems for risk, reporting and operational intelligence.</p>
-        </aside>
+      </section>
+
+      <section className="about section" id="about">
+        <div className="about-intro">
+          <p className="eyebrow">About Me</p>
+          <h2>I follow the decision,<br />not just the dashboard.</h2>
+          <p className="about-lede">
+            I’m Ryan Makamba, a data analyst with a foundation in risk and insurance. I build reporting and analytical systems that help teams understand what is happening, why it matters and what to do next.
+          </p>
+        </div>
+
+        <div className="about-story" aria-label="My professional story">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>How it started</h3>
+              <p>My career began in Zimbabwe’s insurance sector, working across claims, client risk, coverage, pricing and insurer negotiations. It taught me early that analysis is only valuable when it improves a real business decision.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>The perspective expanded</h3>
+              <p>Institutional research at Quinnipiac and fundraising data work with The Salvation Army widened that view. I learned how reliable data, careful reconciliation and clear reporting support decisions across very different organizations.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Right now</h3>
+              <p>I’m completing graduate study in Applied AI and Business Analytics while building practical systems around underwriting, claims intelligence, model explainability and data governance.</p>
+            </div>
+          </article>
+        </div>
+
+        <div className="about-rule">
+          <p className="eyebrow">The Principle I Work By</p>
+          <blockquote>“If the insight cannot guide a decision, the analysis is not finished.”</blockquote>
+          <p>That principle shapes how I approach dashboards, models and reporting workflows: start with the decision, make the evidence clear and leave the next action easier to take.</p>
+        </div>
+
+      </section>
+
+      <section className="experience section" id="experience">
+        <div className="section-heading compact">
+          <p className="eyebrow">Experience</p>
+        </div>
+        <div className="timeline">
+          {experience.map((item) => (
+            <article key={item.role}>
+              <div className={`experience-logo ${item.logoClass}`}>
+                <img src={item.logo} alt={item.logoAlt} />
+              </div>
+              <div className="experience-role">
+                <h3>{item.role}</h3>
+                <h4>{item.organization}<span>{item.location}</span></h4>
+              </div>
+              <time>{item.dates}</time>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="education-section section" aria-label="Education and contact">
+        <div className="about-close">
+          <div className="education-stack" id="education">
+            <p className="eyebrow">Education</p>
+            <div className="credential">
+              <a className="credential-logo-wrap qu-logo" href="https://www.qu.edu/" target="_blank" rel="noreferrer" aria-label="Visit Quinnipiac University">
+                <img src="/education/quinnipiac-logo.png" alt="Quinnipiac University logo" />
+              </a>
+              <span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span>
+            </div>
+            <div className="credential">
+              <a className="credential-logo-wrap nust-logo" href="https://www.nust.ac.zw/" target="_blank" rel="noreferrer" aria-label="Visit National University of Science and Technology">
+                <img src="/education/nust-wordmark.svg" alt="NUST — Think in other Terms" />
+              </a>
+              <span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span>
+            </div>
+          </div>
+          <div className="about-cta" id="contact">
+            <p className="eyebrow">Let’s Connect</p>
+            <h3>Open to opportunities where analytics, risk and operations meet.</h3>
+            <div className="contact-row">
+              <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email me</a>
+              <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
+              <a href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight /></a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="work section" id="work">
@@ -211,26 +296,6 @@ export default function Home() {
       </section>
 
 
-      <section className="experience section" id="experience">
-        <div className="section-heading compact">
-          <p className="eyebrow">Experience</p>
-        </div>
-        <div className="timeline">
-          {experience.map((item) => (
-            <article key={item.role}>
-              <div className={`experience-logo ${item.logoClass}`}>
-                <img src={item.logo} alt={item.logoAlt} />
-              </div>
-              <div className="experience-role">
-                <h3>{item.role}</h3>
-                <h4>{item.organization}<span>{item.location}</span></h4>
-              </div>
-              <time>{item.dates}</time>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="toolkit section" id="toolkit" aria-labelledby="toolkit-title">
         <div className="toolkit-label">
           <p className="eyebrow" id="toolkit-title">Tools I Work With</p>
@@ -248,73 +313,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="about section" id="about">
-        <div className="about-intro">
-          <p className="eyebrow">About Me</p>
-          <h2>I follow the decision,<br />not just the dashboard.</h2>
-          <p className="about-lede">
-            I’m Ryan Makamba, a data analyst with a foundation in risk and insurance. I build reporting and analytical systems that help teams understand what is happening, why it matters and what to do next.
-          </p>
-        </div>
-
-        <div className="about-story" aria-label="My professional story">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>How it started</h3>
-              <p>My career began in Zimbabwe’s insurance sector, working across claims, client risk, coverage, pricing and insurer negotiations. It taught me early that analysis is only valuable when it improves a real business decision.</p>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>The perspective expanded</h3>
-              <p>Institutional research at Quinnipiac and fundraising data work with The Salvation Army widened that view. I learned how reliable data, careful reconciliation and clear reporting support decisions across very different organizations.</p>
-            </div>
-          </article>
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Right now</h3>
-              <p>I’m completing graduate study in Applied AI and Business Analytics while building practical systems around underwriting, claims intelligence, model explainability and data governance.</p>
-            </div>
-          </article>
-        </div>
-
-        <div className="about-rule">
-          <p className="eyebrow">The Principle I Work By</p>
-          <blockquote>“If the insight cannot guide a decision, the analysis is not finished.”</blockquote>
-          <p>That principle shapes how I approach dashboards, models and reporting workflows: start with the decision, make the evidence clear and leave the next action easier to take.</p>
-        </div>
-
-        <div className="about-close">
-          <div className="education-stack" id="education">
-            <p className="eyebrow">Education</p>
-            <div className="credential">
-              <a className="credential-logo-wrap qu-logo" href="https://www.qu.edu/" target="_blank" rel="noreferrer" aria-label="Visit Quinnipiac University">
-                <img src="/education/quinnipiac-logo.png" alt="Quinnipiac University logo" />
-              </a>
-              <span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span>
-            </div>
-            <div className="credential">
-              <a className="credential-logo-wrap nust-logo" href="https://www.nust.ac.zw/" target="_blank" rel="noreferrer" aria-label="Visit National University of Science and Technology">
-                <img src="/education/nust-wordmark.svg" alt="NUST — Think in other Terms" />
-              </a>
-              <span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span>
-            </div>
-          </div>
-          <div className="about-cta" id="contact">
-            <p className="eyebrow">Let’s Connect</p>
-            <h3>Open to opportunities where analytics, risk and operations meet.</h3>
-            <div className="contact-row">
-              <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email me</a>
-              <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
-              <a href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight /></a>
-            </div>
-          </div>
         </div>
       </section>
 
