@@ -291,6 +291,20 @@ function caseIndexFromHash() {
 }
 
 projectTiles.forEach(tile => {
+  const openTile = () => {
+    const index = caseProjects.findIndex(item => item.key === tile.dataset.project);
+    if (index >= 0) showCaseStudy(index, 'push');
+  };
+  tile.addEventListener('click', event => {
+    if (event.target.closest('a,button')) return;
+    openTile();
+  });
+  tile.addEventListener('keydown', event => {
+    if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a,button')) {
+      event.preventDefault();
+      openTile();
+    }
+  });
   if (!reduceMotion) {
     tile.addEventListener('pointermove', event => {
       const rect = tile.getBoundingClientRect();
