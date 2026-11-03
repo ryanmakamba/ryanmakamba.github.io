@@ -124,14 +124,18 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .about-rule>p:last-child { max-width:720px; margin:0 auto; color:#aeb9c7; line-height:1.75; font-size:1rem; }
 .about-close { padding:clamp(75px,9vw,125px) clamp(24px,8vw,130px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(55px,10vw,150px); }
 .education-stack .eyebrow,.about-cta .eyebrow { margin-bottom:24px; }
-.credential { padding:24px 0; border-top:1px solid var(--line); display:grid; grid-template-columns:40px 1fr; gap:14px; }
+.credential { padding:24px 0; border-top:1px solid var(--line); display:grid; grid-template-columns:92px 1fr; gap:18px; align-items:center; }
+.credential-logo-wrap { width:86px; height:66px; display:grid; place-items:center; background:#fff; border:1px solid var(--line); border-radius:7px; padding:8px; }
+.credential-logo-wrap img { display:block; max-width:100%; max-height:100%; object-fit:contain; }
+.credential-logo-wrap.qu-logo img { width:100%; }
+.credential-logo-wrap.nust-logo img { height:54px; }
 .credential b,.credential small { display:block; }
 .credential b { font-family:Georgia,serif; font-size:1.25rem; font-weight:500; }
 .credential small { margin-top:8px; color:var(--muted); font-size:.78rem; line-height:1.5; }
 .about-cta h3 { margin:0 0 30px; font-family:Georgia,serif; font-size:clamp(2rem,3.3vw,3.4rem); line-height:1.08; font-weight:500; }
 .contact-row { display:flex; flex-wrap:wrap; gap:14px; }
 .contact-row a { display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--ink); padding:8px 0; margin-right:16px; font-weight:800; font-size:.86rem; }
-.contact-row svg,.credential svg { width:18px; }
+.contact-row svg { width:18px; }
 .credential b { font-family:Georgia,serif; font-size:1.25rem; font-weight:500; }
 .credential small { margin-top:8px; color:var(--muted); font-size:.78rem; line-height:1.5; }
 
