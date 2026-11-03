@@ -176,3 +176,8 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0}.footer-grid{display:gr
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.marquee{mask-image:none}
 }
+
+/* Animated Aegis product previews */
+.project-preview{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.project-preview iframe{display:block;width:100%;height:100%;border:0;background:transparent}
+@media(max-width:640px){.project-preview{aspect-ratio:16/10}}
