@@ -415,7 +415,7 @@ function startProjectLaunch(link) {
 }
 
 document.addEventListener('click', event => {
-  const link = event.target.closest('.projects-dark a[href*="aegis-"]');
+  const link = event.target.closest('[data-project-live], [data-case-live], [data-case-live-bottom]');
   if (!link) return;
   event.preventDefault();
   event.stopPropagation();
