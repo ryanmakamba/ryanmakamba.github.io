@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103-illustrations">
+  <link rel="stylesheet" href="styles.css?v=20261103-previewfix">
   <script src="script.js?v=20261103-illustrations" defer></script>
 </head>
 <body>
@@ -141,94 +141,127 @@
         <div class="section-heading reveal"><p class="kicker">Featured projects</p><h2>Systems built around real business decisions.</h2></div>
         <div class="project-bento">
           <article class="bento-project bento-project--underwriting reveal" data-project="underwriting" tabindex="0" role="button" aria-label="Open case study for Aegis Underwriting Command Center">
-            <div class="bento-visual illustration-visual underwriting-illustration">
+            <div class="bento-visual illustration-visual preview-frame" aria-label="Underwriting workflow preview">
+              <img class="illustration-dashboard-bg" src="/underwriting-preview.png" loading="lazy" alt="" aria-hidden="true">
               <span class="synthetic-note">Insurance workflow</span>
-              <svg class="project-illustration" viewBox="0 0 760 430" role="img" aria-labelledby="underwriting-illustration-title underwriting-illustration-desc">
-                <title id="underwriting-illustration-title">Underwriting decision workflow</title>
-                <desc id="underwriting-illustration-desc">A policy application flows through a risk gauge to an approval shield.</desc>
+              <svg class="project-illustration" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="uw-title uw-desc">
+                <title id="uw-title">Aegis underwriting workflow</title>
+                <desc id="uw-desc">An application flows to risk assessment with an average risk score of 33 out of 100, then to approval with a 77.4 percent approval rate.</desc>
                 <defs>
-                  <linearGradient id="uw-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122b43"/><stop offset="1" stop-color="#081828"/></linearGradient>
-                  <linearGradient id="uw-teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#71e1d0"/><stop offset="1" stop-color="#1da99a"/></linearGradient>
-                  <filter id="uw-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#020911" flood-opacity=".38"/></filter>
+                  <linearGradient id="uw-card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17364e"/><stop offset="1" stop-color="#0b2032"/></linearGradient>
+                  <linearGradient id="uw-accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7ce5d6"/><stop offset="1" stop-color="#27aa9d"/></linearGradient>
+                  <filter id="uw-soft-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020914" flood-opacity=".35"/></filter>
                 </defs>
-                <rect x="18" y="20" width="724" height="390" rx="30" fill="url(#uw-bg)" stroke="#2b5068"/>
-                <path class="flow-path" d="M238 218H319M443 218H520" fill="none" stroke="#66d9c8" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 11"/>
-                <path d="m310 207 12 11-12 11M511 207l12 11-12 11" fill="none" stroke="#66d9c8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <g class="illustration-node node-document" filter="url(#uw-shadow)">
-                  <rect x="72" y="94" width="166" height="246" rx="18" fill="#f8fbfc"/>
-                  <path d="M187 94v50h51" fill="#d9f2ef"/><path d="m187 94 51 50" fill="none" stroke="#a8d9d2" stroke-width="2"/>
-                  <rect x="98" y="130" width="62" height="10" rx="5" fill="#1da99a"/><rect x="98" y="162" width="112" height="7" rx="3.5" fill="#b9c8d3"/><rect x="98" y="184" width="95" height="7" rx="3.5" fill="#d2dde4"/>
-                  <rect x="98" y="222" width="18" height="18" rx="4" fill="#d8f4ef"/><path d="m102 230 5 5 9-11" fill="none" stroke="#159989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="126" y="225" width="76" height="7" rx="3.5" fill="#b9c8d3"/>
-                  <rect x="98" y="260" width="18" height="18" rx="4" fill="#d8f4ef"/><path d="m102 268 5 5 9-11" fill="none" stroke="#159989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="126" y="263" width="61" height="7" rx="3.5" fill="#b9c8d3"/>
-                  <text x="155" y="316" text-anchor="middle" fill="#17334a" font-size="16" font-weight="800">POLICY APPLICATION</text>
+                <rect class="illustration-surface" x="14" y="14" width="772" height="472" rx="28"/>
+                <g class="uw-connectors" fill="none" stroke="#72dfd0" stroke-width="4" stroke-linecap="round">
+                  <path d="M250 198H326" stroke-dasharray="9 12"/><path d="M474 198H550" stroke-dasharray="9 12"/>
+                  <path d="m316 188 11 10-11 10M540 188l11 10-11 10" stroke-linejoin="round"/>
                 </g>
-                <g class="illustration-node node-gauge" filter="url(#uw-shadow)">
-                  <circle cx="381" cy="218" r="82" fill="#10283d" stroke="#376176" stroke-width="2"/>
-                  <path d="M329 241a58 58 0 0 1 104 0" fill="none" stroke="#28475b" stroke-width="16" stroke-linecap="round"/>
-                  <path d="M329 241a58 58 0 0 1 82-53" fill="none" stroke="url(#uw-teal)" stroke-width="16" stroke-linecap="round"/>
-                  <path d="M381 232l34-35" stroke="#f8fbfc" stroke-width="6" stroke-linecap="round"/><circle cx="381" cy="232" r="8" fill="#71e1d0"/>
-                  <text x="381" y="275" text-anchor="middle" fill="#fff" font-size="17" font-weight="800">RISK ASSESSMENT</text>
-                  <text x="381" y="297" text-anchor="middle" fill="#8fa8b9" font-size="13">exposure · history · controls</text>
+                <g class="uw-node" filter="url(#uw-soft-shadow)">
+                  <rect x="80" y="92" width="170" height="210" rx="18" fill="#f8fbfc"/>
+                  <path d="M198 92v48h52" fill="#dff4f0"/><path d="m198 92 52 48" fill="none" stroke="#acd9d3" stroke-width="2"/>
+                  <rect x="107" y="130" width="67" height="10" rx="5" fill="#22aa9c"/><rect x="107" y="162" width="110" height="7" rx="3.5" fill="#afc0cc"/><rect x="107" y="184" width="91" height="7" rx="3.5" fill="#ced9e0"/>
+                  <rect x="107" y="221" width="19" height="19" rx="5" fill="#d9f4ef"/><path d="m111 229 5 5 10-12" fill="none" stroke="#188f84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="138" y="227" width="69" height="7" rx="3.5" fill="#afc0cc"/>
+                  <rect x="107" y="257" width="19" height="19" rx="5" fill="#d9f4ef"/><path d="m111 265 5 5 10-12" fill="none" stroke="#188f84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="138" y="263" width="54" height="7" rx="3.5" fill="#c9d5dd"/>
                 </g>
-                <g class="illustration-node node-shield" filter="url(#uw-shadow)">
-                  <path d="M602 91 680 120v83c0 66-32 108-78 135-46-27-78-69-78-135v-83l78-29Z" fill="url(#uw-teal)" stroke="#a8fff2" stroke-width="2"/>
-                  <path d="m566 211 24 24 50-56" fill="none" stroke="#072337" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-                  <text x="602" y="293" text-anchor="middle" fill="#062238" font-size="17" font-weight="900">APPROVED</text>
-                  <text x="602" y="316" text-anchor="middle" fill="#0d5a57" font-size="13" font-weight="700">underwriting decision</text>
+                <g class="uw-node" filter="url(#uw-soft-shadow)">
+                  <circle cx="400" cy="198" r="74" fill="#102c41" stroke="#477188" stroke-width="2"/>
+                  <path d="M351 219a55 55 0 0 1 98 0" fill="none" stroke="#31546a" stroke-width="15" stroke-linecap="round"/>
+                  <path d="M351 219a55 55 0 0 1 75-50" fill="none" stroke="url(#uw-accent)" stroke-width="15" stroke-linecap="round"/>
+                  <path class="gauge-needle" d="M400 219 437 181" stroke="#f8fbfc" stroke-width="6" stroke-linecap="round"/><circle cx="400" cy="219" r="8" fill="#7ce5d6"/>
+                </g>
+                <g class="uw-node" filter="url(#uw-soft-shadow)">
+                  <path d="M630 91 700 118v75c0 58-29 97-70 122-41-25-70-64-70-122v-75l70-27Z" fill="url(#uw-accent)" stroke="#b8fff4" stroke-width="2"/>
+                  <path class="shield-check" d="m597 196 22 22 46-52" fill="none" stroke="#08283a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <g class="node-label">
+                  <text class="node-title" x="165" y="346" text-anchor="middle">Application</text>
+                  <text class="node-subtitle" x="165" y="372" text-anchor="middle">Policy details received</text>
+                </g>
+                <g class="node-label">
+                  <text class="node-title" x="400" y="346" text-anchor="middle">Risk Assessment</text>
+                  <text class="node-subtitle" x="400" y="372" text-anchor="middle">Avg risk score 33/100</text>
+                </g>
+                <g class="node-label">
+                  <text class="node-title" x="630" y="346" text-anchor="middle">Approved</text>
+                  <text class="node-subtitle" x="630" y="372" text-anchor="middle">77.4% approval rate</text>
                 </g>
               </svg>
             </div>
             <div class="bento-copy"><p class="project-label">01 · Insurance analytics</p><h3>Aegis Underwriting Command Center</h3><p>A multi-line P&amp;C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.</p><div class="tags"><span>Risk scoring</span><span>Pricing analytics</span><span>P&amp;C insurance</span></div><div class="project-actions"><button class="project-action project-action--primary" type="button" data-case-action="underwriting">View Case Study</button><a class="project-action" href="https://aegis-underwriting-command-center.vercel.app" target="_blank" rel="noreferrer">Open Live Project ↗</a></div></div>
           </article>
           <article class="bento-project bento-project--claims reveal" data-project="claims" tabindex="0" role="button" aria-label="Open case study for Aegis Claims Intelligence Center">
-            <div class="bento-visual illustration-visual claims-illustration">
+            <div class="bento-visual illustration-visual preview-frame" aria-label="Claims workflow preview">
+              <img class="illustration-dashboard-bg" src="/claims-preview.png" loading="lazy" alt="" aria-hidden="true">
               <span class="synthetic-note">Claims workflow</span>
-              <svg class="project-illustration" viewBox="0 0 760 430" role="img" aria-labelledby="claims-illustration-title claims-illustration-desc">
-                <title id="claims-illustration-title">Claims intelligence workflow</title>
-                <desc id="claims-illustration-desc">A damaged vehicle and claim document above a progression from reported to assessed to settled.</desc>
+              <svg class="project-illustration" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="claims-title claims-desc">
+                <title id="claims-title">Aegis claims workflow</title>
+                <desc id="claims-desc">A claim file and damaged vehicle move through Reported, Assessed, and Settled stages.</desc>
                 <defs>
-                  <linearGradient id="cl-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19283a"/><stop offset="1" stop-color="#081522"/></linearGradient>
-                  <linearGradient id="cl-amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd27d"/><stop offset="1" stop-color="#d98b20"/></linearGradient>
-                  <filter id="cl-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#020911" flood-opacity=".4"/></filter>
+                  <linearGradient id="cl-accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd077"/><stop offset="1" stop-color="#d78a20"/></linearGradient>
+                  <filter id="cl-soft-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020914" flood-opacity=".35"/></filter>
                 </defs>
-                <rect x="18" y="20" width="724" height="390" rx="30" fill="url(#cl-bg)" stroke="#43546a"/>
-                <g filter="url(#cl-shadow)">
-                  <path d="M91 238h20l22-65c8-24 24-35 51-35h153c29 0 46 11 59 35l28 52h37c20 0 33 14 33 34v32H77v-29c0-14 5-24 14-24Z" fill="#d9e2eb" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
-                  <path d="m158 173-17 52h235l-26-46c-6-11-15-16-29-16H185c-14 0-23 3-27 10Z" fill="#163049"/>
-                  <path d="m190 163 58 62M307 163l-59 62" stroke="#557187" stroke-width="2"/>
-                  <path d="M77 253h73l15-17 19 15 18-22 18 22h274" fill="none" stroke="#e5a53e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="96" y="258" width="58" height="16" rx="8" fill="#ffd27d"/><rect x="416" y="258" width="55" height="16" rx="8" fill="#ffd27d"/>
-                  <circle cx="160" cy="291" r="35" fill="#0b1725" stroke="#53677b" stroke-width="9"/><circle cx="160" cy="291" r="12" fill="#aebdca"/>
-                  <circle cx="413" cy="291" r="35" fill="#0b1725" stroke="#53677b" stroke-width="9"/><circle cx="413" cy="291" r="12" fill="#aebdca"/>
-                  <path d="m80 205 26 15-22 17" fill="none" stroke="#f0a53c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect class="illustration-surface" x="14" y="14" width="772" height="472" rx="28"/>
+                <g filter="url(#cl-soft-shadow)">
+                  <rect x="78" y="76" width="162" height="210" rx="18" fill="#f8fbfc"/>
+                  <rect x="106" y="112" width="70" height="10" rx="5" fill="#d98d24"/><rect x="106" y="145" width="105" height="7" rx="3.5" fill="#afbdc8"/><rect x="106" y="167" width="83" height="7" rx="3.5" fill="#d2dae1"/>
+                  <circle cx="130" cy="218" r="19" fill="#fff0d0"/><path d="m121 218 7 7 13-16" fill="none" stroke="#d98d24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="162" y="212" width="48" height="7" rx="3.5" fill="#afbdc8"/><rect x="162" y="233" width="37" height="7" rx="3.5" fill="#d2dae1"/>
                 </g>
-                <g transform="translate(520 73)" filter="url(#cl-shadow)">
-                  <rect width="150" height="200" rx="17" fill="#f8fafc"/>
-                  <rect x="24" y="29" width="69" height="10" rx="5" fill="#d98b20"/><rect x="24" y="57" width="101" height="7" rx="3.5" fill="#c4ced8"/><rect x="24" y="79" width="82" height="7" rx="3.5" fill="#d8e0e7"/>
-                  <circle cx="48" cy="126" r="18" fill="#fff1d4"/><path d="m40 126 6 6 12-14" fill="none" stroke="#d98b20" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="76" y="120" width="49" height="7" rx="3.5" fill="#b9c5cf"/><rect x="76" y="138" width="36" height="7" rx="3.5" fill="#d8e0e7"/>
-                  <text x="75" y="179" text-anchor="middle" fill="#263d52" font-size="14" font-weight="900">CLAIM FILE</text>
+                <g class="vehicle-outline" filter="url(#cl-soft-shadow)">
+                  <path d="M332 226h26l24-69c8-21 23-31 47-31h135c25 0 41 10 54 31l28 50h38c18 0 30 13 30 31v34H318v-28c0-11 5-18 14-18Z" fill="#dbe4ec" stroke="#ffffff" stroke-opacity=".6" stroke-width="2"/>
+                  <path d="m403 158-17 49h207l-25-42c-5-9-14-14-27-14H429c-13 0-21 2-26 7Z" fill="#143047"/>
+                  <path d="m442 151 49 56m50-56-50 56" stroke="#60798d" stroke-width="2"/>
+                  <path d="m319 228 30 17 22-27 26 23 23-29 31 33" fill="none" stroke="#e3a13e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="337" y="240" width="53" height="15" rx="7.5" fill="#ffd077"/><rect x="633" y="240" width="51" height="15" rx="7.5" fill="#ffd077"/>
+                  <circle cx="397" cy="270" r="34" fill="#0a1725" stroke="#566a7b" stroke-width="9"/><circle cx="397" cy="270" r="11" fill="#b7c3cd"/>
+                  <circle cx="622" cy="270" r="34" fill="#0a1725" stroke="#566a7b" stroke-width="9"/><circle cx="622" cy="270" r="11" fill="#b7c3cd"/>
                 </g>
-                <g class="claim-progress" transform="translate(104 357)">
-                  <path d="M40 0H500" stroke="#4e6072" stroke-width="4"/><path class="progress-fill" d="M40 0H500" stroke="url(#cl-amber)" stroke-width="4"/>
-                  <circle cx="40" cy="0" r="11" fill="#ffd27d"/><circle cx="270" cy="0" r="11" fill="#f2b34e"/><circle cx="500" cy="0" r="11" fill="#d98b20"/>
-                  <text x="40" y="33" text-anchor="middle" fill="#fff" font-size="14" font-weight="800">Reported</text><text x="270" y="33" text-anchor="middle" fill="#fff" font-size="14" font-weight="800">Assessed</text><text x="500" y="33" text-anchor="middle" fill="#fff" font-size="14" font-weight="800">Settled</text>
+                <g class="damage-callout">
+                  <path d="M553 112 520 183" fill="none" stroke="#ffd077" stroke-width="3"/>
+                  <rect x="527" y="71" width="156" height="42" rx="12" fill="#172b3d" stroke="#e1a13c"/>
+                  <text x="605" y="97" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Damage assessed</text>
+                </g>
+                <g class="claims-timeline">
+                  <path d="M150 365H650" stroke="#496176" stroke-width="4" stroke-linecap="round"/>
+                  <path class="timeline-progress" d="M150 365H650" stroke="url(#cl-accent)" stroke-width="4" stroke-linecap="round"/>
+                  <circle class="timeline-dot dot-1" cx="150" cy="365" r="11"/><circle class="timeline-dot dot-2" cx="400" cy="365" r="11"/><circle class="timeline-dot dot-3" cx="650" cy="365" r="11"/>
+                  <text class="node-title" x="150" y="408" text-anchor="middle">Reported</text><text class="node-subtitle" x="150" y="433" text-anchor="middle">Avg 0 days</text>
+                  <text class="node-title" x="400" y="408" text-anchor="middle">Assessed</text><text class="node-subtitle" x="400" y="433" text-anchor="middle">Avg [add days]</text>
+                  <text class="node-title" x="650" y="408" text-anchor="middle">Settled</text><text class="node-subtitle" x="650" y="433" text-anchor="middle">Avg [add days]</text>
                 </g>
               </svg>
             </div>
             <div class="bento-copy"><p class="project-label">02 · Claims operations</p><h3>Aegis Claims Intelligence Center</h3><p>An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.</p><div class="tags"><span>Claims analytics</span><span>Fraud indicators</span><span>Reserve monitoring</span></div><div class="project-actions"><button class="project-action project-action--primary" type="button" data-case-action="claims">View Case Study</button><a class="project-action" href="https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/" target="_blank" rel="noreferrer">Open Live Project ↗</a></div></div>
           </article>
           <article class="bento-project bento-project--evidence reveal" data-project="evidence" tabindex="0" role="button" aria-label="Open case study for Aegis Evidence Studio">
-            <div class="bento-visual evidence-visual">
-              <img class="evidence-backdrop" src="/aegis-evidence-cover.png" loading="lazy" alt="Faint Aegis Evidence Studio interface backdrop">
-              <div class="monitoring"><i aria-hidden="true"></i> Monitoring Active</div>
-              <ol class="evidence-chain" aria-label="Evidence lifecycle">
-                <li><span>1</span>Decision Captured</li><li><span>2</span>Rule Version Bound</li><li><span>3</span>Controls Evaluated</li><li><span>4</span>Evidence Sealed</li>
-              </ol>
-              <div class="frameworks"><span>NIST</span><span>SOC 2</span><span>ISO 27001</span></div>
-              <span class="synthetic-note">Synthetic data</span>
+            <div class="bento-visual illustration-visual preview-frame evidence-illustration" aria-label="Evidence governance workflow preview">
+              <img class="illustration-dashboard-bg" src="/aegis-evidence-cover.png" loading="lazy" alt="" aria-hidden="true">
+              <span class="synthetic-note">Evidence workflow</span>
+              <svg class="project-illustration" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="evidence-title evidence-desc">
+                <title id="evidence-title">Aegis evidence lifecycle</title>
+                <desc id="evidence-desc">Decision Captured, Rule Version Bound, Controls Evaluated, and Evidence Sealed in sequence.</desc>
+                <defs>
+                  <linearGradient id="ev-accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c3b5ff"/><stop offset="1" stop-color="#8b72e8"/></linearGradient>
+                  <filter id="ev-soft-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020914" flood-opacity=".35"/></filter>
+                </defs>
+                <rect class="illustration-surface" x="14" y="14" width="772" height="472" rx="28"/>
+                <g class="monitoring-svg"><circle cx="635" cy="72" r="7" fill="#4ade80"/><text x="652" y="77" fill="#fff" font-size="13" font-weight="700">Monitoring Active</text></g>
+                <g class="evidence-connectors" fill="none" stroke="#a991ff" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 12">
+                  <path d="M172 210H278M372 210H478M572 210H648"/>
+                </g>
+                <g class="evidence-node ev-1" filter="url(#ev-soft-shadow)"><circle cx="125" cy="210" r="48" fill="#192c45" stroke="#a991ff" stroke-width="3"/><path d="m107 210 12 12 25-29" fill="none" stroke="#c7baff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+                <g class="evidence-node ev-2" filter="url(#ev-soft-shadow)"><circle cx="325" cy="210" r="48" fill="#192c45" stroke="#a991ff" stroke-width="3"/><path d="M308 190h34v42h-34zM315 181h20v12h-20z" fill="none" stroke="#c7baff" stroke-width="5" stroke-linejoin="round"/></g>
+                <g class="evidence-node ev-3" filter="url(#ev-soft-shadow)"><circle cx="525" cy="210" r="48" fill="#192c45" stroke="#a991ff" stroke-width="3"/><path d="m507 210 12 12 25-29" fill="none" stroke="#c7baff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+                <g class="evidence-node ev-4" filter="url(#ev-soft-shadow)"><circle cx="695" cy="210" r="48" fill="url(#ev-accent)" stroke="#e6e0ff" stroke-width="3"/><path d="M676 193h38v38h-38zM685 193v-11h20v11" fill="none" stroke="#152640" stroke-width="5" stroke-linejoin="round"/></g>
+                <text class="node-title" x="125" y="300" text-anchor="middle">Decision Captured</text><text class="node-subtitle" x="125" y="326" text-anchor="middle">Decision recorded</text>
+                <text class="node-title" x="325" y="300" text-anchor="middle">Rule Version Bound</text><text class="node-subtitle" x="325" y="326" text-anchor="middle">Logic attributed</text>
+                <text class="node-title" x="525" y="300" text-anchor="middle">Controls Evaluated</text><text class="node-subtitle" x="525" y="326" text-anchor="middle">Assurance checked</text>
+                <text class="node-title" x="695" y="300" text-anchor="middle">Evidence Sealed</text><text class="node-subtitle" x="695" y="326" text-anchor="middle">Artifact preserved</text>
+                <g class="frameworks-svg"><rect x="259" y="380" width="282" height="52" rx="18" fill="#13253a" stroke="#6f61ae"/><text x="400" y="412" text-anchor="middle" fill="#ded8ff" font-size="13" font-weight="700">NIST · SOC 2 · ISO 27001</text></g>
+              </svg>
             </div>
             <div class="bento-copy"><p class="project-label">03 · Governance &amp; compliance</p><h3>Aegis Evidence Studio</h3><p>An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.</p><div class="tags"><span>NIST</span><span>ISO 27001</span><span>SOC 2</span><span>SOX</span><span>HIPAA</span><span>GDPR</span><span>COBIT</span></div><a class="project-link" href="https://aegis-evidence-studio-tppi.vercel.app" target="_blank" rel="noreferrer">Open live project ↗</a></div>
             <span class="case-label" aria-hidden="true">View case study <b>↗</b></span>
