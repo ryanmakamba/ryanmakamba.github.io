@@ -129,13 +129,14 @@ export default function Home() {
       <header className="site-header">
         <a className="monogram" href="#top" aria-label="Ryan Makamba home">RM</a>
         <nav aria-label="Primary navigation">
-          <a href="#work">View My Work</a>
+          <a href="#top">Home</a>
+          <a href="#work">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#toolkit">Tools</a>
           <a href="#about">About</a>
         </nav>
-        <a className="header-contact" href="mailto:ryanmakamba@gmail.com">
-          Let’s connect <ArrowUpRight />
+        <a className="header-contact" href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">
+          Resume <ArrowUpRight />
         </a>
       </header>
 
@@ -211,6 +212,25 @@ export default function Home() {
       </section>
 
 
+      <section className="experience section" id="experience">
+        <div className="section-heading compact">
+          <p className="eyebrow">Experience</p>
+          <h2>Analytics grounded<br />in operations.</h2>
+        </div>
+        <div className="timeline">
+          {experience.map((item) => (
+            <article key={item.role}>
+              <time>{item.dates}</time>
+              <div>
+                <h3>{item.role}</h3>
+                <h4>{item.organization}</h4>
+                <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="toolkit section" id="toolkit" aria-labelledby="toolkit-title">
         <div className="toolkit-label">
           <p className="eyebrow" id="toolkit-title">Tools I Work With</p>
@@ -227,25 +247,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="experience section" id="experience">
-        <div className="section-heading compact">
-          <p className="eyebrow">Experience</p>
-          <h2>Analytics grounded<br />in operations.</h2>
-        </div>
-        <div className="timeline">
-          {experience.map((item) => (
-            <article key={item.role}>
-              <time>{item.dates}</time>
-              <div>
-                <h3>{item.role}</h3>
-                <h4>{item.organization}</h4>
-                <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              </div>
-            </article>
           ))}
         </div>
       </section>
@@ -320,7 +321,7 @@ export default function Home() {
         </div>
 
         <div className="about-close">
-          <div className="education-stack">
+          <div className="education-stack" id="education">
             <p className="eyebrow">Education</p>
             <div className="credential">
               <a className="credential-logo-wrap qu-logo" href="https://www.qu.edu/" target="_blank" rel="noreferrer" aria-label="Visit Quinnipiac University">
@@ -335,7 +336,7 @@ export default function Home() {
               <span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span>
             </div>
           </div>
-          <div className="about-cta">
+          <div className="about-cta" id="contact">
             <p className="eyebrow">Let’s Connect</p>
             <h3>Open to opportunities where analytics, risk and operations meet.</h3>
             <div className="contact-row">
