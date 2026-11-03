@@ -145,7 +145,7 @@ export default function Home() {
           <h1>Hi, I’m<br />Ryan</h1>
           <p className="specialization">Data Analytics <i /> Risk &amp; Insurance <i /> Business Operations</p>
           <p className="intro">
-            A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies to deliver data-driven insights. With over 4+ years of experience in data analytics and reporting, statistical analysis and business intelligence across insurance, higher education, and nonprofit operations.
+            Risk and insurance analytics professional with 4+ years of experience across underwriting, claims, and data-driven operations. Skilled in analyzing complex risk and exposure data to support pricing, coverage, and portfolio decisions, with applied AI and machine learning experience in insurance underwriting contexts.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#work">View My Work <ArrowDownRight /></a>
