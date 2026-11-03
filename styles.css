@@ -228,7 +228,6 @@ body.has-case-open{overflow:hidden}
 .project-action:hover,.project-action:focus-visible{transform:translateY(-2px);border-color:var(--project-accent);outline:none}
 .project-action--primary{border-color:var(--project-accent);background:var(--project-accent);color:#071521}
 .bento-project--claims .project-action--primary{color:#241705}
-.bento-project--underwriting .case-label,.bento-project--claims 
 .case-study-stage[data-case-project="underwriting"] img,.case-study-stage[data-case-project="claims"] img{width:100%;height:auto;max-height:none;object-fit:contain;object-position:center top;background:#fff}
 .flow-path{animation:flowDash 3s linear infinite}.node-document,.node-gauge,.node-shield{animation:nodeFloat 4.2s ease-in-out infinite}.node-gauge{animation-delay:.35s}.node-shield{animation-delay:.7s}.progress-fill{stroke-dasharray:460;stroke-dashoffset:460;animation:claimProgress 3.4s ease-in-out infinite}
 @keyframes flowDash{to{stroke-dashoffset:-38}}@keyframes nodeFloat{50%{transform:translateY(-5px)}}@keyframes claimProgress{0%,12%{stroke-dashoffset:460}70%,100%{stroke-dashoffset:0}}
