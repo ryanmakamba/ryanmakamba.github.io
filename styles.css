@@ -215,3 +215,23 @@ body.has-case-open{overflow:hidden}
 @media(max-width:900px){.project-bento{grid-template-columns:1fr}.bento-project--underwriting{grid-row:auto;min-height:0}.thesis-project{grid-template-columns:1fr}.thesis-project .project-art{min-height:250px}}
 @media(max-width:600px){.bento-visual,.bento-project--underwriting .bento-visual{min-height:280px;padding:2.7rem .8rem 1rem}.bento-browser,.bento-browser--tilted{height:220px;transform:none}.glass-chip{font-size:.62rem;padding:.48rem .6rem}.chip-b{bottom:12px}.bento-copy{padding:0 1.2rem 1.4rem}.role-switcher{left:1rem;top:2.2rem}.role-switcher button{padding:.35rem .45rem}.claim-chips{left:1rem;right:auto;bottom:.6rem}.claim-chips span{min-width:0}.evidence-chain li{font-size:.5rem}.case-label{display:none}.case-study-controls{align-items:stretch;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.bento-project{transform:none!important}.glass-chip{transform:none!important}.monitoring i,.evidence-chain::before,.evidence-chain span{animation:none!important}.evidence-chain::before{transform:scaleX(1)}}
+
+
+/* Illustration previews for projects 1 and 2 */
+.illustration-visual{display:grid;place-items:center;min-height:340px;padding:1.25rem;background:radial-gradient(circle at 70% 18%,color-mix(in srgb,var(--project-accent) 14%,transparent),transparent 42%)}
+.bento-project--underwriting .illustration-visual{min-height:440px;padding:2rem 1.25rem}
+.project-illustration{display:block;width:100%;height:auto;max-height:410px;overflow:visible;filter:drop-shadow(0 22px 34px rgba(0,0,0,.24));transform:translateZ(24px);transition:transform .35s var(--ease)}
+.bento-project:hover .project-illustration{transform:translateZ(30px) scale(1.015)}
+.illustration-visual .synthetic-note{background:rgba(5,17,29,.76)}
+.project-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;margin-top:1.2rem}
+.project-action{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.72rem .9rem;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:transparent;color:#f5f8fb;font:800 .72rem/1 Inter,"Plus Jakarta Sans",sans-serif;text-decoration:none;cursor:pointer;transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease}
+.project-action:hover,.project-action:focus-visible{transform:translateY(-2px);border-color:var(--project-accent);outline:none}
+.project-action--primary{border-color:var(--project-accent);background:var(--project-accent);color:#071521}
+.bento-project--claims .project-action--primary{color:#241705}
+.bento-project--underwriting .case-label,.bento-project--claims .case-label{display:none}
+.case-study-stage[data-case-project="underwriting"] img,.case-study-stage[data-case-project="claims"] img{width:100%;height:auto;max-height:none;object-fit:contain;object-position:center top;background:#fff}
+.flow-path{animation:flowDash 3s linear infinite}.node-document,.node-gauge,.node-shield{animation:nodeFloat 4.2s ease-in-out infinite}.node-gauge{animation-delay:.35s}.node-shield{animation-delay:.7s}.progress-fill{stroke-dasharray:460;stroke-dashoffset:460;animation:claimProgress 3.4s ease-in-out infinite}
+@keyframes flowDash{to{stroke-dashoffset:-38}}@keyframes nodeFloat{50%{transform:translateY(-5px)}}@keyframes claimProgress{0%,12%{stroke-dashoffset:460}70%,100%{stroke-dashoffset:0}}
+@media(max-width:900px){.bento-project--underwriting .illustration-visual,.illustration-visual{min-height:auto;padding:1.25rem}.project-illustration{max-height:none}}
+@media(max-width:600px){.illustration-visual,.bento-project--underwriting .illustration-visual{min-height:250px;padding:2.3rem .45rem .55rem}.project-illustration{width:100%;max-width:100%;transform:none}.project-actions{align-items:stretch;flex-direction:column}.project-action{width:100%}}
+@media(prefers-reduced-motion:reduce){.project-illustration,.bento-project:hover .project-illustration{transform:none!important}.flow-path,.node-document,.node-gauge,.node-shield,.progress-fill{animation:none!important}.progress-fill{stroke-dashoffset:0}}
