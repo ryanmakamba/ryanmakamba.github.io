@@ -44,7 +44,8 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .project-points { color:var(--muted); line-height:1.7; margin:20px 0 0; padding-left:1.15rem; font-size:.96rem; }
 .project-points li + li { margin-top:10px; }
 .tags { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; }
-.tags span { border:1px solid var(--line); padding:7px 10px; font-size:.72rem; font-weight:700; }
+.tags span { border:1px solid var(--line); padding:7px 10px; font-size:.72rem; font-weight:700; cursor:default; transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease; }
+.tags span:hover { background:var(--ink); color:#fff; border-color:var(--ink); transform:translateY(-2px); box-shadow:0 8px 16px rgba(16,35,63,.15); }
 .project-body a { display:inline-flex; gap:8px; align-items:center; color:var(--rust); font-size:.86rem; font-weight:800; }
 .research-status { color:var(--rust); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; font-weight:800; }
 .project-visual { grid-column:2; width:100%; padding:clamp(10px,1.4vw,18px); background:#eceff2; display:block; overflow:hidden; border:1px solid #d8dde3; border-radius:10px; box-shadow:0 22px 55px rgba(16,35,63,.14); }
@@ -76,9 +77,7 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .tool-icon { width:42px; height:42px; display:grid; place-items:center; background:rgba(31,92,120,.09); border-radius:50%; color:var(--blue); }
 .tool-icon svg { width:21px; height:21px; stroke-width:1.8; }
 .tool-icon img { width:23px; height:23px; display:block; object-fit:contain; }
-.tool-chip b,.tool-chip small { display:block; }
-.tool-chip b { color:var(--ink); font-family:Georgia,serif; font-size:1.02rem; font-weight:600; }
-.tool-chip small { margin-top:5px; color:var(--muted); font-size:.72rem; letter-spacing:.02em; }
+.tool-chip b { display:block; color:var(--ink); font-family:Georgia,serif; font-size:1.02rem; font-weight:600; }
 @keyframes tool-scroll { to { transform:translateX(calc(-50% - 7px)); } }
 @media (prefers-reduced-motion:reduce) { .tool-track { animation:none; } }
 

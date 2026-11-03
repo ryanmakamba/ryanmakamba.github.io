@@ -112,7 +112,7 @@ const featuredTools = [
   { label: "Salesforce", detail: "CRM & Pipeline", logo: "/logos/salesforce.svg" },
   { label: "HubSpot", detail: "CRM & Growth", logo: "/logos/hubspot.svg" },
   { label: "ChatGPT", detail: "Research & Analysis", logo: "/logos/openai.svg" },
-  { label: "Claude", detail: "AI-Assisted Workflows", logo: "/logos/anthropic.svg" },
+  { label: "Claud", detail: "", logo: "/logos/claude.svg" },
   { label: "Canva", detail: "Visual Communication", logo: "/logos/canva.svg" },
   { label: "Zoho Desk", detail: "Customer Support", logo: "/logos/zoho.svg" },
   { label: "GitHub", detail: "Version Control", logo: "/logos/github.svg" },
@@ -240,10 +240,10 @@ export default function Home() {
           {[featuredTools.slice(0, 8), featuredTools.slice(8)].map((row, rowIndex) => (
             <div className={`tool-marquee ${rowIndex === 1 ? "reverse" : ""}`} key={rowIndex}>
               <div className="tool-track">
-                {[...row, ...row].map(({ label, detail, logo }, index) => (
+                {[...row, ...row].map(({ label, logo }, index) => (
                   <article className="tool-chip" key={`${label}-${index}`} aria-hidden={index >= row.length}>
                     <span className="tool-icon"><img src={logo} alt="" /></span>
-                    <span><b>{label}</b><small>{detail}</small></span>
+                    <span><b>{label}</b></span>
                   </article>
                 ))}
               </div>
