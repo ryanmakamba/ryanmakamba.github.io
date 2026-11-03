@@ -112,7 +112,7 @@ const featuredTools = [
   { label: "Salesforce", detail: "CRM & Pipeline", logo: "/logos/salesforce.svg" },
   { label: "HubSpot", detail: "CRM & Growth", logo: "/logos/hubspot.svg" },
   { label: "ChatGPT", detail: "Research & Analysis", logo: "/logos/openai.svg" },
-  { label: "Claud", detail: "", logo: "/logos/claude.svg" },
+  { label: "Claude", detail: "", logo: "/logos/claude.svg" },
   { label: "Canva", detail: "Visual Communication", logo: "/logos/canva.svg" },
   { label: "Zoho Desk", detail: "Customer Support", logo: "/logos/zoho.svg" },
   { label: "GitHub", detail: "Version Control", logo: "/logos/github.svg" },
@@ -142,8 +142,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> New Haven, Connecticut</p>
-          <h1>Ryan<br />Makamba</h1>
+          <h1>Hi, I’m<br />Ryan</h1>
           <p className="specialization">Data Analytics <i /> Risk &amp; Insurance <i /> Business Operations</p>
           <p className="intro">
             A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies to deliver data-driven insights. With over 4+ years of experience in data analytics and reporting, statistical analysis and business intelligence across insurance, higher education, and nonprofit operations.
