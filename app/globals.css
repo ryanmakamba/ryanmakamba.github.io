@@ -16,7 +16,7 @@ nav a:hover,.text-link:hover { border-color:var(--rust); }
 .hero:after { content:""; position:absolute; width:280px; height:280px; border:54px solid rgba(31,92,120,.08); border-radius:50%; right:-90px; top:80px; }
 .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:.76rem!important; font-weight:800; margin:0 0 26px; display:flex; align-items:center; gap:10px; }
 .eyebrow span { width:8px; height:8px; border-radius:50%; background:var(--rust); }
-h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9.25rem); line-height:.98; letter-spacing:-.05em; font-weight:500; margin:0; }
+h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.2rem,8.7vw,8.2rem); line-height:.98; letter-spacing:-.05em; font-weight:500; margin:0; }
 .specialization { margin:38px 0 24px; display:flex; align-items:center; flex-wrap:wrap; gap:10px; text-transform:uppercase; letter-spacing:.09em; font-size:clamp(.72rem,1.1vw,.94rem); font-weight:800; }
 .specialization i { width:5px; height:5px; background:var(--rust); transform:rotate(45deg); }
 .intro { max-width:680px; font-size:clamp(1.1rem,1.65vw,1.5rem); line-height:1.55; color:#405066; }
@@ -73,11 +73,11 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .tool-track { width:max-content; display:flex; gap:14px; animation:tool-scroll 34s linear infinite; }
 .tool-marquee.reverse .tool-track { animation-direction:reverse; animation-duration:38s; }
 .tool-marquee:hover .tool-track { animation-play-state:paused; }
-.tool-chip { width:250px; min-height:86px; display:grid; grid-template-columns:46px 1fr; gap:14px; align-items:center; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:16px 18px; box-shadow:0 7px 18px rgba(16,35,63,.05); }
-.tool-icon { width:42px; height:42px; display:grid; place-items:center; background:rgba(31,92,120,.09); border-radius:50%; color:var(--blue); }
+.tool-chip { width:205px; min-height:72px; display:flex; justify-content:center; gap:12px; align-items:center; text-align:center; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:12px 16px; box-shadow:0 7px 18px rgba(16,35,63,.05); }
+.tool-icon { width:36px; height:36px; flex:0 0 36px; display:grid; place-items:center; background:rgba(31,92,120,.09); border-radius:50%; color:var(--blue); }
 .tool-icon svg { width:21px; height:21px; stroke-width:1.8; }
-.tool-icon img { width:23px; height:23px; display:block; object-fit:contain; }
-.tool-chip b { display:block; color:var(--ink); font-family:Georgia,serif; font-size:1.02rem; font-weight:600; }
+.tool-icon img { width:20px; height:20px; display:block; object-fit:contain; }
+.tool-chip b { display:block; color:var(--ink); font-family:Georgia,serif; font-size:.94rem; font-weight:600; }
 @keyframes tool-scroll { to { transform:translateX(calc(-50% - 7px)); } }
 @media (prefers-reduced-motion:reduce) { .tool-track { animation:none; } }
 
@@ -185,7 +185,7 @@ footer svg { width:15px; }
   .timeline article { grid-template-columns:1fr; gap:16px; padding:28px 0; }
   .timeline time { justify-self:start; text-align:left; grid-row:2; }
   .experience-logo { width:156px; height:74px; }
-  .tool-chip { width:220px; min-height:78px; }
+  .tool-chip { width:190px; min-height:68px; }
   .about-story article { gap:15px; }
   .about-rule { text-align:left; }
   .about-rule .eyebrow { justify-content:flex-start; }
