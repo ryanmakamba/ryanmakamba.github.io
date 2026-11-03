@@ -135,26 +135,75 @@
       </div>
     </section>
 
-    <section class="section projects" id="projects" data-section>
-      <div class="container">
+    <section class="section projects projects-dark" id="projects" data-section data-projects>
+      <div class="project-spotlight" aria-hidden="true"></div>
+      <div class="container projects-shell">
         <div class="section-heading reveal"><p class="kicker">Featured projects</p><h2>Systems built around real business decisions.</h2></div>
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-preview"><iframe src="/preview-underwriting.html" title="Animated synthetic-data preview of Aegis Underwriting Command Center" loading="lazy"></iframe></div>
-            <div class="project-content"><p class="project-label">01 · Insurance analytics</p><h3>Aegis Underwriting Command Center</h3><p>A multi-line P&amp;C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.</p><div class="tags"><span>Risk scoring</span><span>Pricing analytics</span><span>P&amp;C insurance</span></div><a class="project-link" href="https://aegis-underwriting-command-center.vercel.app" target="_blank" rel="noreferrer">Open live project ↗</a></div>
+        <div class="project-bento">
+          <article class="bento-project bento-project--underwriting reveal" data-project="underwriting" tabindex="0" role="button" aria-label="Open case study for Aegis Underwriting Command Center">
+            <div class="bento-visual">
+              <div class="bento-browser bento-browser--tilted">
+                <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><div>aegis-underwriting-command-center.vercel.app</div></div>
+                <img src="/underwriting-preview.png" loading="lazy" alt="Synthetic Aegis underwriting dashboard with line-of-business filters and underwriting disposition funnel">
+              </div>
+              <span class="glass-chip chip-a" data-depth="1.25"><strong>77.4%</strong> approved</span>
+              <span class="glass-chip chip-b" data-depth=".85"><strong>$82.16M</strong> indicated premium</span>
+              <span class="glass-chip chip-c" data-depth="1.05"><strong>5</strong> engines</span>
+              <span class="synthetic-note">Synthetic data</span>
+            </div>
+            <div class="bento-copy"><p class="project-label">01 · Insurance analytics</p><h3>Aegis Underwriting Command Center</h3><p>A multi-line P&amp;C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.</p><div class="tags"><span>Risk scoring</span><span>Pricing analytics</span><span>P&amp;C insurance</span></div><a class="project-link" href="https://aegis-underwriting-command-center.vercel.app" target="_blank" rel="noreferrer">Open live project ↗</a></div>
+            <span class="case-label" aria-hidden="true">View case study <b>↗</b></span>
           </article>
-          <article class="project-card reveal">
-            <div class="project-preview"><iframe src="/preview-claims.html" title="Animated synthetic-data preview of Aegis Claims Intelligence Center" loading="lazy"></iframe></div>
-            <div class="project-content"><p class="project-label">02 · Claims operations</p><h3>Aegis Claims Intelligence Center</h3><p>An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.</p><div class="tags"><span>Claims analytics</span><span>Fraud indicators</span><span>Reserve monitoring</span></div><a class="project-link" href="https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/" target="_blank" rel="noreferrer">Open live project ↗</a></div>
+
+          <article class="bento-project bento-project--claims reveal" data-project="claims" tabindex="0" role="button" aria-label="Open case study for Aegis Claims Intelligence Center">
+            <div class="bento-visual">
+              <div class="bento-browser">
+                <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><div>aegis-claims-intelligence-center.vercel.app</div></div>
+                <img src="/claims-preview.png" loading="lazy" alt="Synthetic Aegis claims dashboard showing a claims queue and operational indicators">
+              </div>
+              <div class="role-switcher" aria-label="Claims dashboard role view">
+                <button type="button" class="is-active" data-claim-role="adjuster" aria-pressed="true">Adjuster</button>
+                <button type="button" data-claim-role="manager" aria-pressed="false">Manager</button>
+                <button type="button" data-claim-role="executive" aria-pressed="false">Executive</button>
+              </div>
+              <div class="claim-chips" data-role-view="adjuster"><span>Severity <strong>[add metric]</strong></span><span>Aging <strong>[add metric]</strong></span></div>
+              <div class="claim-chips" data-role-view="manager" hidden><span>Reserve adequacy <strong>[add metric]</strong></span><span>Fraud flags <strong>[add metric]</strong></span></div>
+              <div class="claim-chips" data-role-view="executive" hidden><span>Portfolio severity <strong>[add metric]</strong></span><span>Leakage <strong>[add metric]</strong></span></div>
+              <span class="synthetic-note">Synthetic data · placeholder values</span>
+            </div>
+            <div class="bento-copy"><p class="project-label">02 · Claims operations</p><h3>Aegis Claims Intelligence Center</h3><p>An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.</p><div class="tags"><span>Claims analytics</span><span>Fraud indicators</span><span>Reserve monitoring</span></div><a class="project-link" href="https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/" target="_blank" rel="noreferrer">Open live project ↗</a></div>
+            <span class="case-label" aria-hidden="true">View case study <b>↗</b></span>
           </article>
-          <article class="project-card reveal">
-            <div class="project-preview"><iframe src="/preview-evidence.html" title="Animated synthetic-data preview of Aegis Evidence Studio" loading="lazy"></iframe></div>
-            <div class="project-content"><p class="project-label">03 · Governance & compliance</p><h3>Aegis Evidence Studio</h3><p>An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.</p><div class="tags"><span>NIST</span><span>ISO 27001</span><span>SOC 2</span><span>SOX</span><span>HIPAA</span><span>GDPR</span><span>COBIT</span></div><a class="project-link" href="https://aegis-evidence-studio-tppi.vercel.app" target="_blank" rel="noreferrer">Open live project ↗</a></div>
+
+          <article class="bento-project bento-project--evidence reveal" data-project="evidence" tabindex="0" role="button" aria-label="Open case study for Aegis Evidence Studio">
+            <div class="bento-visual evidence-visual">
+              <img class="evidence-backdrop" src="/aegis-evidence-cover.png" loading="lazy" alt="Faint Aegis Evidence Studio interface backdrop">
+              <div class="monitoring"><i aria-hidden="true"></i> Monitoring Active</div>
+              <ol class="evidence-chain" aria-label="Evidence lifecycle">
+                <li><span>1</span>Decision Captured</li><li><span>2</span>Rule Version Bound</li><li><span>3</span>Controls Evaluated</li><li><span>4</span>Evidence Sealed</li>
+              </ol>
+              <div class="frameworks"><span>NIST</span><span>SOC 2</span><span>ISO 27001</span></div>
+              <span class="synthetic-note">Synthetic data</span>
+            </div>
+            <div class="bento-copy"><p class="project-label">03 · Governance &amp; compliance</p><h3>Aegis Evidence Studio</h3><p>An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.</p><div class="tags"><span>NIST</span><span>ISO 27001</span><span>SOC 2</span><span>SOX</span><span>HIPAA</span><span>GDPR</span><span>COBIT</span></div><a class="project-link" href="https://aegis-evidence-studio-tppi.vercel.app" target="_blank" rel="noreferrer">Open live project ↗</a></div>
+            <span class="case-label" aria-hidden="true">View case study <b>↗</b></span>
           </article>
-          <article class="project-card reveal">
-            <div class="project-art thesis-art" aria-hidden="true"><span>04</span><strong>MODEL<br>EXPLAINABILITY</strong><small>Performance · Fairness · Governance</small></div>
-            <div class="project-content"><p class="project-label">04 · Master’s thesis</p><h3>Balancing Predictive Performance and Explainability in Insurance Underwriting</h3><p>Research examining how underwriting models can improve predictive performance while remaining transparent, fair and suitable for defensible insurance decisions.</p><ul><li>Comparing traditional statistical and machine-learning underwriting models across predictive performance, calibration, fairness and interpretability.</li><li>Using Python, Scikit-learn and XGBoost to compare models, MLflow to track experiments, and SHAP to assess risk drivers, transparency and fairness.</li></ul><div class="tags"><span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span><span>SHAP</span></div><span class="project-status">Graduate research · In progress</span></div>
-          </article>
+        </div>
+
+        <article class="project-card thesis-project reveal">
+          <div class="project-art thesis-art" aria-hidden="true"><span>04</span><strong>MODEL<br>EXPLAINABILITY</strong><small>Performance · Fairness · Governance</small></div>
+          <div class="project-content"><p class="project-label">04 · Master’s thesis</p><h3>Balancing Predictive Performance and Explainability in Insurance Underwriting</h3><p>Research examining how underwriting models can improve predictive performance while remaining transparent, fair and suitable for defensible insurance decisions.</p><ul><li>Comparing traditional statistical and machine-learning underwriting models across predictive performance, calibration, fairness and interpretability.</li><li>Using Python, Scikit-learn and XGBoost to compare models, MLflow to track experiments, and SHAP to assess risk drivers, transparency and fairness.</li></ul><div class="tags"><span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span><span>SHAP</span></div><span class="project-status">Graduate research · In progress</span></div>
+        </article>
+      </div>
+
+      <div class="case-study-view" data-case-study hidden role="dialog" aria-modal="true" aria-labelledby="case-study-title">
+        <div class="case-study-panel">
+          <button class="case-back" type="button" data-case-back>← Back</button>
+          <p class="project-label" data-case-label></p>
+          <h2 id="case-study-title" data-case-title></h2>
+          <p class="case-study-description" data-case-description></p>
+          <div class="case-study-stage" data-case-stage></div>
+          <div class="case-study-controls"><a class="button button-primary" data-case-live target="_blank" rel="noreferrer">Visit live project ↗</a><button class="button case-next" type="button" data-case-next>Next project →</button></div>
         </div>
       </div>
     </section>
