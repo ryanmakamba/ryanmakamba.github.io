@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261103-no-case-label-2">
-  <script src="script.js?v=20261103-launch-mode" defer></script>
+  <script src="script.js?v=20261103-inline-launch" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -335,5 +335,38 @@
       <div class="project-launch__track" aria-hidden="true"><span></span></div>
     </div>
   </div>
+  <script>
+    (function () {
+      var routes = {
+        underwriting: ['Aegis Underwriting Command Center', 'https://aegis-underwriting-command-center.vercel.app/'],
+        claims: ['Aegis Claims Intelligence Center', 'https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/'],
+        evidence: ['Aegis Evidence Studio', 'https://aegis-evidence-studio-tppi.vercel.app/']
+      };
+      var key = new URLSearchParams(window.location.search).get('launch');
+      var route = routes[key];
+      if (!route) return;
+      var overlay = document.querySelector('[data-project-launch]');
+      var count = document.querySelector('[data-launch-count]');
+      var name = document.querySelector('[data-launch-name]');
+      if (!overlay || !count || !name) {
+        window.location.replace(route[1]);
+        return;
+      }
+      name.textContent = route[0];
+      count.textContent = '3';
+      overlay.hidden = false;
+      document.body.classList.add('is-launching');
+      var value = 3;
+      var timer = window.setInterval(function () {
+        value -= 1;
+        if (value > 0) {
+          count.textContent = String(value);
+          return;
+        }
+        window.clearInterval(timer);
+        window.location.replace(route[1]);
+      }, 1000);
+    }());
+  </script>
 </body>
 </html>
