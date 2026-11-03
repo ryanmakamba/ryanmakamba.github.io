@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071521">
+  <title>Launching Aegis Project</title>
+  <style>
+    :root{color-scheme:dark;font-family:"Plus Jakarta Sans",Inter,system-ui,sans-serif}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#173454 0,#0c1d31 38%,#071521 72%);color:#fff}
+    main{text-align:center;padding:2rem}
+    .eyebrow{margin:0 0 1rem;color:#9fb1c7;font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    h1{margin:0;font-size:clamp(2.2rem,7vw,5.8rem);line-height:.95}
+    .count{display:block;margin:1.2rem 0;font-size:clamp(6rem,24vw,15rem);font-weight:800;line-height:.8;color:#9f87f5;text-shadow:0 0 50px rgba(159,135,245,.34)}
+    .project{margin:1rem auto 0;max-width:42rem;color:#c8d3df;font-size:clamp(1rem,2vw,1.25rem)}
+    a{display:inline-block;margin-top:2rem;color:#fff;text-underline-offset:.3em}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+</head>
+<body>
+  <main aria-live="polite">
+    <p class="eyebrow">Aegis project launch</p>
+    <h1>Going live in</h1>
+    <strong class="count" id="count">3</strong>
+    <p class="project" id="project">Preparing your dashboard…</p>
+    <a href="/#projects">Cancel and return to projects</a>
+  </main>
+  <script>
+    const projects={
+      underwriting:{name:"Aegis Underwriting Command Center",url:"https://aegis-underwriting-command-center.vercel.app/"},
+      claims:{name:"Aegis Claims Intelligence Center",url:"https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/"},
+      evidence:{name:"Aegis Evidence Studio",url:"https://aegis-evidence-studio-tppi.vercel.app/"}
+    };
+    const key=new URLSearchParams(location.search).get("project");
+    const project=projects[key];
+    const count=document.getElementById("count");
+    const label=document.getElementById("project");
+    if(!project){
+      document.querySelector("h1").textContent="Project unavailable";
+      count.hidden=true;
+      label.textContent="Return to the portfolio and choose a project again.";
+    }else{
+      label.textContent=project.name;
+      let value=3;
+      const timer=setInterval(()=>{
+        value-=1;
+        if(value>0){count.textContent=String(value);return}
+        clearInterval(timer);
+        location.replace(project.url);
+      },1000);
+    }
+  </script>
+</body>
+</html>
