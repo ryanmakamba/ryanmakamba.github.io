@@ -285,36 +285,6 @@ export default function Home() {
           </article>
         </div>
 
-        <div className="about-capabilities">
-          <div className="about-subheading">
-            <p className="eyebrow">What I Do</p>
-            <h3>Three disciplines.<br />One decision-focused approach.</h3>
-          </div>
-          <div className="capability-list">
-            <details open>
-              <summary><span>Data Analytics &amp; BI</span><small>From fragmented data to a clear operating view.</small></summary>
-              <div className="capability-body">
-                <p>I structure, analyze and visualize data so leaders can see performance, investigate drivers and act with confidence.</p>
-                <div><span>Power BI</span><span>SQL</span><span>Python</span><span>Excel</span></div>
-              </div>
-            </details>
-            <details>
-              <summary><span>Risk &amp; Insurance Analytics</span><small>Connecting exposure, claims and portfolio performance.</small></summary>
-              <div className="capability-body">
-                <p>I bring insurance context to the numbers, translating loss patterns, reserve indicators and risk profiles into practical underwriting and claims insight.</p>
-                <div><span>Underwriting</span><span>Claims</span><span>Pricing</span><span>Reserving</span></div>
-              </div>
-            </details>
-            <details>
-              <summary><span>Data Operations &amp; Governance</span><small>Making reporting reliable, repeatable and defensible.</small></summary>
-              <div className="capability-body">
-                <p>I improve the workflows behind reporting through validation, reconciliation, documentation and controls that keep information trustworthy.</p>
-                <div><span>Data Quality</span><span>Reconciliation</span><span>Compliance</span><span>Automation</span></div>
-              </div>
-            </details>
-          </div>
-        </div>
-
         <div className="about-rule">
           <p className="eyebrow">The Principle I Work By</p>
           <blockquote>“If the insight cannot guide a decision, the analysis is not finished.”</blockquote>
