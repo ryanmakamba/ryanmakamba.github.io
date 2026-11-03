@@ -104,6 +104,7 @@ function renderCaseStudy(index) {
   caseView.querySelector('[data-case-description]').textContent = item.description;
   caseView.querySelector('[data-case-live]').href = item.url;
   const stage = caseView.querySelector('[data-case-stage]');
+  stage.dataset.caseProject = item.key;
   if (item.key === 'evidence') {
     stage.innerHTML = '<div class="monitoring"><i aria-hidden="true"></i> Monitoring Active</div><ol class="evidence-chain" aria-label="Evidence lifecycle"><li><span>1</span>Decision Captured</li><li><span>2</span>Rule Version Bound</li><li><span>3</span>Controls Evaluated</li><li><span>4</span>Evidence Sealed</li></ol><div class="frameworks"><span>NIST</span><span>SOC 2</span><span>ISO 27001</span></div>';
   } else {
@@ -181,3 +182,12 @@ caseBack?.addEventListener('click', closeCaseStudy);
 caseNext?.addEventListener('click', () => renderCaseStudy((activeProjectIndex + 1) % caseProjects.length));
 caseView?.addEventListener('click', event => { if (event.target === caseView) closeCaseStudy(); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && caseView && !caseView.hidden) closeCaseStudy(); });
+
+
+document.querySelectorAll('[data-case-action]').forEach(button => {
+  button.addEventListener('click', event => {
+    event.stopPropagation();
+    const tile = button.closest('.bento-project');
+    if (tile) openCaseStudy(tile);
+  });
+});
