@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 150" role="img" aria-labelledby="title desc">
+  <title id="title">NUST logo</title>
+  <desc id="desc">NUST wordmark with the motto Think in other Terms</desc>
+  <rect width="360" height="150" fill="#ffffff"/>
+  <text x="8" y="92" fill="#18385f" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700" letter-spacing="1">NUST</text>
+  <text x="10" y="128" fill="#18385f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600">&quot;Think in other Terms&quot;</text>
+</svg>
