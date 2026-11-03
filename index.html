@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103-bento">
-  <script src="script.js?v=20261103-bento" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261103-illustrations">
+  <script src="script.js?v=20261103-illustrations" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -141,40 +141,85 @@
         <div class="section-heading reveal"><p class="kicker">Featured projects</p><h2>Systems built around real business decisions.</h2></div>
         <div class="project-bento">
           <article class="bento-project bento-project--underwriting reveal" data-project="underwriting" tabindex="0" role="button" aria-label="Open case study for Aegis Underwriting Command Center">
-            <div class="bento-visual">
-              <div class="bento-browser bento-browser--tilted">
-                <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><div>aegis-underwriting-command-center.vercel.app</div></div>
-                <img src="/underwriting-preview.png" loading="lazy" alt="Synthetic Aegis underwriting dashboard with line-of-business filters and underwriting disposition funnel">
-              </div>
-              <span class="glass-chip chip-a" data-depth="1.25"><strong>77.4%</strong> approved</span>
-              <span class="glass-chip chip-b" data-depth=".85"><strong>$82.16M</strong> indicated premium</span>
-              <span class="glass-chip chip-c" data-depth="1.05"><strong>5</strong> engines</span>
-              <span class="synthetic-note">Synthetic data</span>
+            <div class="bento-visual illustration-visual underwriting-illustration">
+              <span class="synthetic-note">Insurance workflow</span>
+              <svg class="project-illustration" viewBox="0 0 760 430" role="img" aria-labelledby="underwriting-illustration-title underwriting-illustration-desc">
+                <title id="underwriting-illustration-title">Underwriting decision workflow</title>
+                <desc id="underwriting-illustration-desc">A policy application flows through a risk gauge to an approval shield.</desc>
+                <defs>
+                  <linearGradient id="uw-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122b43"/><stop offset="1" stop-color="#081828"/></linearGradient>
+                  <linearGradient id="uw-teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#71e1d0"/><stop offset="1" stop-color="#1da99a"/></linearGradient>
+                  <filter id="uw-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#020911" flood-opacity=".38"/></filter>
+                </defs>
+                <rect x="18" y="20" width="724" height="390" rx="30" fill="url(#uw-bg)" stroke="#2b5068"/>
+                <path class="flow-path" d="M238 218H319M443 218H520" fill="none" stroke="#66d9c8" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 11"/>
+                <path d="m310 207 12 11-12 11M511 207l12 11-12 11" fill="none" stroke="#66d9c8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <g class="illustration-node node-document" filter="url(#uw-shadow)">
+                  <rect x="72" y="94" width="166" height="246" rx="18" fill="#f8fbfc"/>
+                  <path d="M187 94v50h51" fill="#d9f2ef"/><path d="m187 94 51 50" fill="none" stroke="#a8d9d2" stroke-width="2"/>
+                  <rect x="98" y="130" width="62" height="10" rx="5" fill="#1da99a"/><rect x="98" y="162" width="112" height="7" rx="3.5" fill="#b9c8d3"/><rect x="98" y="184" width="95" height="7" rx="3.5" fill="#d2dde4"/>
+                  <rect x="98" y="222" width="18" height="18" rx="4" fill="#d8f4ef"/><path d="m102 230 5 5 9-11" fill="none" stroke="#159989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="126" y="225" width="76" height="7" rx="3.5" fill="#b9c8d3"/>
+                  <rect x="98" y="260" width="18" height="18" rx="4" fill="#d8f4ef"/><path d="m102 268 5 5 9-11" fill="none" stroke="#159989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="126" y="263" width="61" height="7" rx="3.5" fill="#b9c8d3"/>
+                  <text x="155" y="316" text-anchor="middle" fill="#17334a" font-size="16" font-weight="800">POLICY APPLICATION</text>
+                </g>
+                <g class="illustration-node node-gauge" filter="url(#uw-shadow)">
+                  <circle cx="381" cy="218" r="82" fill="#10283d" stroke="#376176" stroke-width="2"/>
+                  <path d="M329 241a58 58 0 0 1 104 0" fill="none" stroke="#28475b" stroke-width="16" stroke-linecap="round"/>
+                  <path d="M329 241a58 58 0 0 1 82-53" fill="none" stroke="url(#uw-teal)" stroke-width="16" stroke-linecap="round"/>
+                  <path d="M381 232l34-35" stroke="#f8fbfc" stroke-width="6" stroke-linecap="round"/><circle cx="381" cy="232" r="8" fill="#71e1d0"/>
+                  <text x="381" y="275" text-anchor="middle" fill="#fff" font-size="17" font-weight="800">RISK ASSESSMENT</text>
+                  <text x="381" y="297" text-anchor="middle" fill="#8fa8b9" font-size="13">exposure · history · controls</text>
+                </g>
+                <g class="illustration-node node-shield" filter="url(#uw-shadow)">
+                  <path d="M602 91 680 120v83c0 66-32 108-78 135-46-27-78-69-78-135v-83l78-29Z" fill="url(#uw-teal)" stroke="#a8fff2" stroke-width="2"/>
+                  <path d="m566 211 24 24 50-56" fill="none" stroke="#072337" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="602" y="293" text-anchor="middle" fill="#062238" font-size="17" font-weight="900">APPROVED</text>
+                  <text x="602" y="316" text-anchor="middle" fill="#0d5a57" font-size="13" font-weight="700">underwriting decision</text>
+                </g>
+              </svg>
             </div>
-            <div class="bento-copy"><p class="project-label">01 · Insurance analytics</p><h3>Aegis Underwriting Command Center</h3><p>A multi-line P&amp;C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.</p><div class="tags"><span>Risk scoring</span><span>Pricing analytics</span><span>P&amp;C insurance</span></div><a class="project-link" href="https://aegis-underwriting-command-center.vercel.app" target="_blank" rel="noreferrer">Open live project ↗</a></div>
-            <span class="case-label" aria-hidden="true">View case study <b>↗</b></span>
+            <div class="bento-copy"><p class="project-label">01 · Insurance analytics</p><h3>Aegis Underwriting Command Center</h3><p>A multi-line P&amp;C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.</p><div class="tags"><span>Risk scoring</span><span>Pricing analytics</span><span>P&amp;C insurance</span></div><div class="project-actions"><button class="project-action project-action--primary" type="button" data-case-action="underwriting">View Case Study</button><a class="project-action" href="https://aegis-underwriting-command-center.vercel.app" target="_blank" rel="noreferrer">Open Live Project ↗</a></div></div>
           </article>
-
           <article class="bento-project bento-project--claims reveal" data-project="claims" tabindex="0" role="button" aria-label="Open case study for Aegis Claims Intelligence Center">
-            <div class="bento-visual">
-              <div class="bento-browser">
-                <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><div>aegis-claims-intelligence-center.vercel.app</div></div>
-                <img src="/claims-preview.png" loading="lazy" alt="Synthetic Aegis claims dashboard showing a claims queue and operational indicators">
-              </div>
-              <div class="role-switcher" aria-label="Claims dashboard role view">
-                <button type="button" class="is-active" data-claim-role="adjuster" aria-pressed="true">Adjuster</button>
-                <button type="button" data-claim-role="manager" aria-pressed="false">Manager</button>
-                <button type="button" data-claim-role="executive" aria-pressed="false">Executive</button>
-              </div>
-              <div class="claim-chips" data-role-view="adjuster"><span>Severity <strong>[add metric]</strong></span><span>Aging <strong>[add metric]</strong></span></div>
-              <div class="claim-chips" data-role-view="manager" hidden><span>Reserve adequacy <strong>[add metric]</strong></span><span>Fraud flags <strong>[add metric]</strong></span></div>
-              <div class="claim-chips" data-role-view="executive" hidden><span>Portfolio severity <strong>[add metric]</strong></span><span>Leakage <strong>[add metric]</strong></span></div>
-              <span class="synthetic-note">Synthetic data · placeholder values</span>
+            <div class="bento-visual illustration-visual claims-illustration">
+              <span class="synthetic-note">Claims workflow</span>
+              <svg class="project-illustration" viewBox="0 0 760 430" role="img" aria-labelledby="claims-illustration-title claims-illustration-desc">
+                <title id="claims-illustration-title">Claims intelligence workflow</title>
+                <desc id="claims-illustration-desc">A damaged vehicle and claim document above a progression from reported to assessed to settled.</desc>
+                <defs>
+                  <linearGradient id="cl-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19283a"/><stop offset="1" stop-color="#081522"/></linearGradient>
+                  <linearGradient id="cl-amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd27d"/><stop offset="1" stop-color="#d98b20"/></linearGradient>
+                  <filter id="cl-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#020911" flood-opacity=".4"/></filter>
+                </defs>
+                <rect x="18" y="20" width="724" height="390" rx="30" fill="url(#cl-bg)" stroke="#43546a"/>
+                <g filter="url(#cl-shadow)">
+                  <path d="M91 238h20l22-65c8-24 24-35 51-35h153c29 0 46 11 59 35l28 52h37c20 0 33 14 33 34v32H77v-29c0-14 5-24 14-24Z" fill="#d9e2eb" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+                  <path d="m158 173-17 52h235l-26-46c-6-11-15-16-29-16H185c-14 0-23 3-27 10Z" fill="#163049"/>
+                  <path d="m190 163 58 62M307 163l-59 62" stroke="#557187" stroke-width="2"/>
+                  <path d="M77 253h73l15-17 19 15 18-22 18 22h274" fill="none" stroke="#e5a53e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="96" y="258" width="58" height="16" rx="8" fill="#ffd27d"/><rect x="416" y="258" width="55" height="16" rx="8" fill="#ffd27d"/>
+                  <circle cx="160" cy="291" r="35" fill="#0b1725" stroke="#53677b" stroke-width="9"/><circle cx="160" cy="291" r="12" fill="#aebdca"/>
+                  <circle cx="413" cy="291" r="35" fill="#0b1725" stroke="#53677b" stroke-width="9"/><circle cx="413" cy="291" r="12" fill="#aebdca"/>
+                  <path d="m80 205 26 15-22 17" fill="none" stroke="#f0a53c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <g transform="translate(520 73)" filter="url(#cl-shadow)">
+                  <rect width="150" height="200" rx="17" fill="#f8fafc"/>
+                  <rect x="24" y="29" width="69" height="10" rx="5" fill="#d98b20"/><rect x="24" y="57" width="101" height="7" rx="3.5" fill="#c4ced8"/><rect x="24" y="79" width="82" height="7" rx="3.5" fill="#d8e0e7"/>
+                  <circle cx="48" cy="126" r="18" fill="#fff1d4"/><path d="m40 126 6 6 12-14" fill="none" stroke="#d98b20" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="76" y="120" width="49" height="7" rx="3.5" fill="#b9c5cf"/><rect x="76" y="138" width="36" height="7" rx="3.5" fill="#d8e0e7"/>
+                  <text x="75" y="179" text-anchor="middle" fill="#263d52" font-size="14" font-weight="900">CLAIM FILE</text>
+                </g>
+                <g class="claim-progress" transform="translate(104 357)">
+                  <path d="M40 0H500" stroke="#4e6072" stroke-width="4"/><path class="progress-fill" d="M40 0H500" stroke="url(#cl-amber)" stroke-width="4"/>
+                  <circle cx="40" cy="0" r="11" fill="#ffd27d"/><circle cx="270" cy="0" r="11" fill="#f2b34e"/><circle cx="500" cy="0" r="11" fill="#d98b20"/>
+                  <text x="40" y="33" text-anchor="middle" fill="#fff" font-size="14" font-weight="800">Reported</text><text x="270" y="33" text-anchor="middle" fill="#fff" font-size="14" font-weight="800">Assessed</text><text x="500" y="33" text-anchor="middle" fill="#fff" font-size="14" font-weight="800">Settled</text>
+                </g>
+              </svg>
             </div>
-            <div class="bento-copy"><p class="project-label">02 · Claims operations</p><h3>Aegis Claims Intelligence Center</h3><p>An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.</p><div class="tags"><span>Claims analytics</span><span>Fraud indicators</span><span>Reserve monitoring</span></div><a class="project-link" href="https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/" target="_blank" rel="noreferrer">Open live project ↗</a></div>
-            <span class="case-label" aria-hidden="true">View case study <b>↗</b></span>
+            <div class="bento-copy"><p class="project-label">02 · Claims operations</p><h3>Aegis Claims Intelligence Center</h3><p>An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.</p><div class="tags"><span>Claims analytics</span><span>Fraud indicators</span><span>Reserve monitoring</span></div><div class="project-actions"><button class="project-action project-action--primary" type="button" data-case-action="claims">View Case Study</button><a class="project-action" href="https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/" target="_blank" rel="noreferrer">Open Live Project ↗</a></div></div>
           </article>
-
           <article class="bento-project bento-project--evidence reveal" data-project="evidence" tabindex="0" role="button" aria-label="Open case study for Aegis Evidence Studio">
             <div class="bento-visual evidence-visual">
               <img class="evidence-backdrop" src="/aegis-evidence-cover.png" loading="lazy" alt="Faint Aegis Evidence Studio interface backdrop">
