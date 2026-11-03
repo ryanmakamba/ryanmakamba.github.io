@@ -400,31 +400,6 @@ function startProjectLaunch(link) {
   }, 1000);
 }
 
-const launchRoutes = {
-  underwriting: {
-    name: 'Aegis Underwriting Command Center',
-    url: 'https://aegis-underwriting-command-center.vercel.app/'
-  },
-  claims: {
-    name: 'Aegis Claims Intelligence Center',
-    url: 'https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/'
-  },
-  evidence: {
-    name: 'Aegis Evidence Studio',
-    url: 'https://aegis-evidence-studio-tppi.vercel.app/'
-  }
-};
-
-const launchKey = new URLSearchParams(window.location.search).get('launch');
-if (launchKey && launchRoutes[launchKey]) {
-  const route = launchRoutes[launchKey];
-  const launchLink = document.createElement('a');
-  launchLink.href = route.url;
-  launchLink.setAttribute('aria-label', route.name);
-  startProjectLaunch(launchLink);
-  if (launchName) launchName.textContent = route.name;
-}
-
 document.querySelectorAll('[data-case-live], [data-case-live-bottom]').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
