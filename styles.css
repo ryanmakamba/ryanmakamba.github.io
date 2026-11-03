@@ -288,4 +288,5 @@ body.is-launching{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.case-study-view{scroll-behavior:auto}.case-content-section{opacity:1;transform:none}.case-nav-button{transition:none}}
 
 .case-next-step span::after{content:":"}
-\body.has-case-open .projects-dark{z-index:100}\n\nbody.has-case-open .site-header{display:none}\n
+body.has-case-open .projects-dark{z-index:100}
+body.has-case-open .site-header{display:none}
