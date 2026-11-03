@@ -253,20 +253,89 @@ export default function Home() {
       </section>
 
       <section className="about section" id="about">
-        <div className="about-copy">
-          <p className="eyebrow">About</p>
-          <h2>Risk knowledge.<br />Analytical discipline.<br />Operational perspective.</h2>
-          <p>
-            My background spans insurance underwriting and claims, institutional research, regulatory reporting and nonprofit data operations. That range helps me see both the numbers and the decisions behind them.
+        <div className="about-intro">
+          <p className="eyebrow">About Me</p>
+          <h2>I follow the decision,<br />not just the dashboard.</h2>
+          <p className="about-lede">
+            I’m Ryan Makamba, a data analyst with a foundation in risk and insurance. I build reporting and analytical systems that help teams understand what is happening, why it matters and what to do next.
           </p>
-          <div className="contact-row">
-            <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email</a>
-            <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer"><ArrowUpRight /> LinkedIn</a>
+        </div>
+
+        <div className="about-story" aria-label="My professional story">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>How it started</h3>
+              <p>My career began in Zimbabwe’s insurance sector, working across claims, client risk, coverage, pricing and insurer negotiations. It taught me early that analysis is only valuable when it improves a real business decision.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>The perspective expanded</h3>
+              <p>Institutional research at Quinnipiac and fundraising data work with The Salvation Army widened that view. I learned how reliable data, careful reconciliation and clear reporting support decisions across very different organizations.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Right now</h3>
+              <p>I’m completing graduate study in Applied AI and Business Analytics while building practical systems around underwriting, claims intelligence, model explainability and data governance.</p>
+            </div>
+          </article>
+        </div>
+
+        <div className="about-capabilities">
+          <div className="about-subheading">
+            <p className="eyebrow">What I Do</p>
+            <h3>Three disciplines.<br />One decision-focused approach.</h3>
+          </div>
+          <div className="capability-list">
+            <details open>
+              <summary><span>Data Analytics &amp; BI</span><small>From fragmented data to a clear operating view.</small></summary>
+              <div className="capability-body">
+                <p>I structure, analyze and visualize data so leaders can see performance, investigate drivers and act with confidence.</p>
+                <div><span>Power BI</span><span>SQL</span><span>Python</span><span>Excel</span></div>
+              </div>
+            </details>
+            <details>
+              <summary><span>Risk &amp; Insurance Analytics</span><small>Connecting exposure, claims and portfolio performance.</small></summary>
+              <div className="capability-body">
+                <p>I bring insurance context to the numbers, translating loss patterns, reserve indicators and risk profiles into practical underwriting and claims insight.</p>
+                <div><span>Underwriting</span><span>Claims</span><span>Pricing</span><span>Reserving</span></div>
+              </div>
+            </details>
+            <details>
+              <summary><span>Data Operations &amp; Governance</span><small>Making reporting reliable, repeatable and defensible.</small></summary>
+              <div className="capability-body">
+                <p>I improve the workflows behind reporting through validation, reconciliation, documentation and controls that keep information trustworthy.</p>
+                <div><span>Data Quality</span><span>Reconciliation</span><span>Compliance</span><span>Automation</span></div>
+              </div>
+            </details>
           </div>
         </div>
-        <div className="credentials">
-          <div className="credential"><GraduationCap /><span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span></div>
-          <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
+
+        <div className="about-rule">
+          <p className="eyebrow">The Principle I Work By</p>
+          <blockquote>“If the insight cannot guide a decision, the analysis is not finished.”</blockquote>
+          <p>That principle shapes how I approach dashboards, models and reporting workflows: start with the decision, make the evidence clear and leave the next action easier to take.</p>
+        </div>
+
+        <div className="about-close">
+          <div className="education-stack">
+            <p className="eyebrow">Education</p>
+            <div className="credential"><GraduationCap /><span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span></div>
+            <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
+          </div>
+          <div className="about-cta">
+            <p className="eyebrow">Let’s Connect</p>
+            <h3>Open to opportunities where analytics, risk and operations meet.</h3>
+            <div className="contact-row">
+              <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email me</a>
+              <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
+              <a href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight /></a>
+            </div>
+          </div>
         </div>
       </section>
 
