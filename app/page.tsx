@@ -154,15 +154,20 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className="hero-cta about-cta" id="contact">
+          <p className="eyebrow">Let’s Connect</p>
+          <h3>Open to opportunities where analytics, risk and operations meet.</h3>
+          <div className="contact-row">
+            <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email me</a>
+            <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
+            <a href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight /></a>
+          </div>
+        </div>
       </section>
 
       <section className="about section" id="about">
-        <div className="about-intro">
+        <div className="section-heading compact about-heading">
           <p className="eyebrow">About Me</p>
-          <h2>I follow the decision,<br />not just the dashboard.</h2>
-          <p className="about-lede">
-            I’m Ryan Makamba, a data analyst with a foundation in risk and insurance. I build reporting and analytical systems that help teams understand what is happening, why it matters and what to do next.
-          </p>
         </div>
 
         <div className="about-story" aria-label="My professional story">
@@ -234,15 +239,7 @@ export default function Home() {
               <span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span>
             </div>
           </div>
-          <div className="about-cta" id="contact">
-            <p className="eyebrow">Let’s Connect</p>
-            <h3>Open to opportunities where analytics, risk and operations meet.</h3>
-            <div className="contact-row">
-              <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email me</a>
-              <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
-              <a href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">Resume <ArrowUpRight /></a>
-            </div>
-          </div>
+
         </div>
       </section>
 
