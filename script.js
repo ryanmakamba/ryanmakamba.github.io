@@ -414,10 +414,10 @@ function startProjectLaunch(link) {
   }, 1000);
 }
 
-document.addEventListener('click', event => {
-  const link = event.target.closest('[data-project-live], [data-case-live], [data-case-live-bottom]');
-  if (!link) return;
-  event.preventDefault();
-  event.stopPropagation();
-  startProjectLaunch(link);
+document.querySelectorAll('[data-project-live], [data-case-live], [data-case-live-bottom]').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    startProjectLaunch(link);
+  });
 });
