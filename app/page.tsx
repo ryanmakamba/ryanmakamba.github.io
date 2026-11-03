@@ -330,7 +330,7 @@ export default function Home() {
             </div>
             <div className="credential">
               <a className="credential-logo-wrap nust-logo" href="https://www.nust.ac.zw/" target="_blank" rel="noreferrer" aria-label="Visit National University of Science and Technology">
-                <img src="/education/nust-logo.png" alt="National University of Science and Technology crest" />
+                <img src="/education/national-university-n.svg" alt="National University N logo" />
               </a>
               <span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span>
             </div>
