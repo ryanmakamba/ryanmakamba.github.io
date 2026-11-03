@@ -215,7 +215,6 @@ export default function Home() {
       <section className="experience section" id="experience">
         <div className="section-heading compact">
           <p className="eyebrow">Experience</p>
-          <h2>Analytics grounded<br />in operations.</h2>
         </div>
         <div className="timeline">
           {experience.map((item) => (

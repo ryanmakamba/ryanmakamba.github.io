@@ -82,10 +82,9 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 @keyframes tool-scroll { to { transform:translateX(calc(-50% - 7px)); } }
 @media (prefers-reduced-motion:reduce) { .tool-track { animation:none; } }
 
-.experience { background:var(--ink); color:white; display:grid; grid-template-columns:28% 1fr; gap:clamp(50px,7vw,110px); }
-.experience .section-heading { display:block; margin:0; position:sticky; top:130px; align-self:start; }
+.experience { background:var(--ink); color:white; display:block; }
+.experience .section-heading { display:block; margin:0 0 34px; }
 .experience .eyebrow { color:#d88768; }
-.experience .section-heading h2 { font-size:clamp(2.6rem,4.7vw,4.8rem); }
 .timeline { border-bottom:1px solid rgba(255,255,255,.2); }
 .timeline article { min-height:138px; display:grid; grid-template-columns:170px minmax(260px,1fr) 132px; align-items:center; gap:clamp(24px,3vw,46px); padding:28px 0; border-top:1px solid rgba(255,255,255,.2); }
 .experience-logo { width:170px; height:82px; display:grid; place-items:center; overflow:hidden; background:#fff; border:1px solid rgba(255,255,255,.26); border-radius:7px; padding:12px 16px; }
