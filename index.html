@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261104-compact-project-layout">
+  <link rel="stylesheet" href="styles.css?v=20261104-split-contact">
   <script src="script.js?v=20261104-case-toc-click" defer></script>
 </head>
 <body>
@@ -228,9 +228,22 @@
     </section>
 
     <section class="section closing" id="contact" data-section>
-      <div class="container closing-card reveal">
-        <div><p class="kicker">Let’s connect</p><h2>Have a risk problem hiding in the data?</h2><p>I’m open to opportunities where insurance, analytics, and operations meet.</p></div>
-        <div class="closing-actions"><a class="button button-light" href="mailto:ryanmakamba@gmail.com">Email me ↗</a><a class="text-link text-link-light" href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+      <div class="container closing-card contact-split reveal">
+        <div class="contact-copy">
+          <div class="contact-eyebrow"><p class="kicker">Let’s connect</p><span class="availability"><i aria-hidden="true"></i>Open to opportunities</span></div>
+          <h2>Let’s turn insight<br>into <span>action.</span></h2>
+          <p class="contact-intro">I’m open to opportunities where insurance, analytics, and operations meet.</p>
+          <div class="contact-direct"><span>Prefer email?</span><a href="mailto:ryanmakamba@gmail.com">ryanmakamba@gmail.com ↗</a></div>
+          <a class="text-link text-link-light contact-linkedin" href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        </div>
+        <form class="contact-form" id="portfolio-contact-form" action="mailto:ryanmakamba@gmail.com" method="post" enctype="text/plain" aria-label="Prepare an email to Ryan" aria-describedby="contact-form-note">
+          <div class="contact-field"><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" placeholder="Your name" maxlength="100" required></div>
+          <div class="contact-field"><label for="contact-email">Your email</label><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" maxlength="254" required></div>
+          <div class="contact-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" placeholder="Tell me about the role, project, or challenge." maxlength="2000" required></textarea></div>
+          <button class="contact-send" type="submit">Continue to Email <span aria-hidden="true">↗</span></button>
+          <p class="contact-form-note" id="contact-form-note">Opens a draft in your email app. Review it and press Send there.</p>
+          <p class="contact-form-status" id="contact-form-status" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -280,6 +293,29 @@
         window.location.replace(route[1]);
       }, 1000);
     }());
+  </script>
+
+  <script>
+    /* Contact draft preparation: no server submission or false delivery confirmation. */
+    (() => {
+      const form = document.getElementById('portfolio-contact-form');
+      if (!form) return;
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const name = form.elements.namedItem('name').value.trim();
+        const email = form.elements.namedItem('email').value.trim();
+        const message = form.elements.namedItem('message').value.trim();
+        if (!name || !message) {
+          document.getElementById('contact-form-status').textContent = 'Please enter your name and a message.';
+          return;
+        }
+        const subject = 'Portfolio enquiry from ' + name;
+        const body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+        window.location.href = 'mailto:ryanmakamba@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        document.getElementById('contact-form-status').textContent = 'Email draft requested. If no app opens, use the direct email link. Your message has not been sent from this website.';
+      });
+    })();
   </script>
 </body>
 </html>
