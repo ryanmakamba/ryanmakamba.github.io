@@ -358,3 +358,41 @@ body.has-case-open .site-header{display:none}
   .projects-dark .bento-project--evidence > .bento-copy { padding:24px; }
   .projects-dark .bento-project--evidence > .bento-copy { padding-top:8px; }
 }
+
+/* Split contact section: navy and copper, with an honest email-draft form. */
+#contact .contact-split {
+  --contact-copper:#e2a084;
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.92fr);
+  align-items:center; gap:clamp(32px,5vw,72px);
+  padding:clamp(28px,5vw,72px);
+  background:radial-gradient(ellipse at 12% 20%,#30466266,transparent 55%),linear-gradient(135deg,#19263e,#2a3b55);
+  border-radius:28px 28px 64px 28px;
+}
+#contact .contact-copy { min-width:0; }
+#contact .contact-eyebrow { display:flex; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:28px; }
+#contact .contact-eyebrow .kicker { color:var(--contact-copper); margin:0; font-size:12px; }
+#contact .availability { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid #ffffff26; border-radius:999px; color:#e9edf3; background:#ffffff08; font-size:12px; font-weight:650; }
+#contact .availability i { width:8px; height:8px; border-radius:50%; background:#7de29c; box-shadow:0 0 0 4px #7de29c14; }
+#contact .contact-copy h2 { max-width:none; margin:0; color:#fff; font-size:clamp(38px,4.8vw,72px); font-weight:800; line-height:1.06; letter-spacing:-.045em; }
+#contact .contact-copy h2 span { color:var(--contact-copper); }
+#contact .contact-intro { max-width:440px; margin:24px 0 32px; color:#d0d8e3; font-size:17px; line-height:1.7; }
+#contact .contact-direct { display:flex; align-items:baseline; flex-wrap:wrap; gap:6px 10px; color:#c7d1df; font-size:14px; }
+#contact .contact-direct a { color:#fff; font-weight:700; text-decoration:underline; text-decoration-color:var(--contact-copper); text-underline-offset:6px; overflow-wrap:anywhere; }
+#contact .contact-linkedin { margin-top:24px; font-size:14px; display:inline-block; }
+#contact .contact-form { min-width:0; padding:clamp(24px,3vw,36px); display:grid; gap:20px; background:#ffffff07; border:1px solid #ffffff24; border-radius:24px; box-shadow:0 16px 48px #09132216; }
+#contact .contact-field { display:grid; gap:8px; }
+#contact .contact-field label { color:#f6f8fb; font-size:14px; font-weight:650; }
+#contact .contact-field input,#contact .contact-field textarea { display:block; width:100%; min-width:0; padding:14px 16px; background:#14213999; border:1px solid #7b8da366; border-radius:12px; color:#fff; font:inherit; font-size:16px; line-height:1.5; }
+#contact .contact-field input { min-height:52px; }
+#contact .contact-field textarea { resize:vertical; min-height:136px; max-height:400px; }
+#contact .contact-field input::placeholder,#contact .contact-field textarea::placeholder { color:#b1bed0; opacity:1; }
+#contact .contact-send { display:flex; align-items:center; justify-content:center; gap:14px; min-height:54px; padding:14px 20px; border:1px solid white; border-radius:999px; background:white; color:#19263e; font:inherit; font-size:15px; font-weight:800; cursor:pointer; transition:transform .18s ease,box-shadow .18s ease; }
+#contact .contact-send:hover { transform:translateY(-2px); box-shadow:0 8px 24px #07102033; }
+#contact .contact-send:active { transform:translateY(0); }
+#contact .contact-form-note { margin:0; color:#c7d1df; font-size:12px; line-height:1.6; text-align:center; }
+#contact .contact-form-status { margin:0; color:#f4d1bd; font-size:13px; line-height:1.5; }
+#contact .contact-form-status:empty { display:none; }
+#contact a:focus-visible,#contact button:focus-visible,#contact input:focus-visible,#contact textarea:focus-visible { outline:3px solid #edb89b; outline-offset:4px; }
+@media(max-width:850px) { #contact .contact-split { grid-template-columns:1fr; gap:32px; border-bottom-right-radius:48px; } #contact .contact-copy h2 { font-size:clamp(38px,7vw,60px); } #contact .contact-intro { max-width:600px; margin-bottom:24px; } }
+@media(max-width:480px) { #contact .contact-split { padding:28px 20px; border-radius:20px 20px 40px 20px; } #contact .contact-form { padding:20px 16px; border-radius:18px; } #contact .contact-intro { font-size:16px; } }
+@media(prefers-reduced-motion:reduce) { #contact .contact-send { transition:none; transform:none!important; } }
