@@ -289,3 +289,10 @@ body.is-launching{overflow:hidden}
 .case-next-step span::after{content:":"}
 body.has-case-open .projects-dark{z-index:100}
 body.has-case-open .site-header{display:none}
+
+
+/* Reliable project action hit targets */
+.bento-project{cursor:default;transform:translateY(var(--lift,0));transform-style:flat}
+.bento-copy{transform:none}
+.project-actions{position:relative;z-index:20;isolation:isolate;pointer-events:auto}
+.project-action{position:relative;z-index:21;pointer-events:auto;touch-action:manipulation}
