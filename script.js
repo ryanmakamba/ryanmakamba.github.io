@@ -232,7 +232,21 @@ function renderCaseStudy(index) {
     const open = toc.classList.toggle('is-open');
     event.currentTarget.setAttribute('aria-expanded', String(open));
   });
-  toc.querySelectorAll('a').forEach(link => link.addEventListener('click', () => toc.classList.remove('is-open')));
+  toc.querySelectorAll('a').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    const target = caseView.querySelector(link.getAttribute('href'));
+    if (!target) return;
+
+    toc.querySelectorAll('a').forEach(item => item.classList.toggle('is-active', item === link));
+    target.classList.add('is-visible');
+    target.scrollIntoView({
+      behavior: reduceMotion ? 'auto' : 'smooth',
+      block: 'start'
+    });
+    toc.classList.remove('is-open');
+    const toggle = toc.querySelector('.case-toc-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }));
 
   if (caseSectionObserver) caseSectionObserver.disconnect();
   const sections = [...caseView.querySelectorAll('.case-content-section')];
