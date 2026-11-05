@@ -459,3 +459,27 @@ main > #contact { padding-top:24px; }
 @media(prefers-reduced-motion:reduce) {
   #home .intro-enter, .site-header { animation:none; opacity:1; transform:none; }
 }
+
+
+/* Hero expertise map: real capabilities, not an unlabeled dashboard. */
+#home .expertise-card { transform:none; padding:clamp(24px,3vw,36px); background:linear-gradient(145deg,var(--surface),var(--bg)); box-shadow:var(--shadow-1); }
+#home .expertise-eyebrow { margin:0 0 16px; font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+#home .expertise-card h2 { font-size:clamp(30px,3vw,40px); line-height:1.1; letter-spacing:-.04em; margin:0 0 24px; }
+#home .expertise-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; border-top:1px solid var(--line); }
+#home .expertise-item { min-width:0; padding:20px 12px 20px 0; border-bottom:1px solid var(--line); }
+#home .expertise-item:nth-child(even) { padding-left:16px; padding-right:0; border-left:1px solid var(--line); }
+#home .expertise-icon { display:block; width:28px; height:28px; margin-bottom:12px; color:var(--accent); }
+#home .expertise-icon svg { display:block; width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+#home .expertise-item h3 { font-size:14px; letter-spacing:-.015em; margin:0 0 8px; }
+#home .expertise-item p { margin:0; font-size:12px; line-height:1.65; color:var(--muted); }
+#home .expertise-link { display:inline-flex; gap:12px; align-items:center; margin-top:24px; padding:4px 0; font-size:13px; font-weight:800; border-bottom:1px solid var(--accent); }
+#home .expertise-link:hover { color:var(--accent); }
+@media(prefers-reduced-motion:no-preference) {
+  #home .expertise-item { animation:intro-arrive 450ms var(--ease) both; animation-delay:calc(500ms + var(--expertise-order)*80ms); }
+  .intro-return #home .expertise-item { animation-duration:250ms; animation-delay:calc(100ms + var(--expertise-order)*40ms); }
+}
+@media(max-width:360px) {
+  #home .expertise-card { padding:20px; }
+  #home .expertise-item:nth-child(even) { padding-left:12px; }
+  #home .expertise-item h3 { font-size:13px; }
+}

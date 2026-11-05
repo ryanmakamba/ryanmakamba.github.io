@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261105-editorial-intro">
+  <link rel="stylesheet" href="styles.css?v=20261105-expertise-card">
   <script src="script.js?v=20261104-case-toc-click" defer></script>
   <script>
     // Repeat visits get a shorter entrance; storage restrictions never block the page.
@@ -59,22 +59,17 @@
           </div>
         </div>
 
-        <div class="hero-visual intro-enter intro-snapshot" aria-label="Portfolio analytics snapshot">
-          <div class="visual-topline"><span>Portfolio snapshot</span><span class="live-dot">Live</span></div>
-          <div class="visual-score">
-            <span>Risk intelligence</span>
-            <strong>Connected</strong>
-          </div>
-          <div class="mini-chart" aria-hidden="true">
-            <i style="--h:42%"></i><i style="--h:60%"></i><i style="--h:53%"></i><i style="--h:76%"></i><i style="--h:66%"></i><i style="--h:88%"></i><i style="--h:82%"></i>
-          </div>
-          <div class="visual-grid">
-            <div><span>Underwriting</span><b>Pricing + Risk</b></div>
-            <div><span>Claims</span><b>Severity + Reserves</b></div>
-            <div><span>Governance</span><b>Evidence + Controls</b></div>
-            <div><span>Research</span><b>ML + Explainability</b></div>
-          </div>
-        </div>
+        <aside class="hero-visual expertise-card intro-enter intro-snapshot" aria-labelledby="expertise-title">
+          <p class="expertise-eyebrow">What I Build</p>
+          <h2 id="expertise-title">From Risk<br>to Decision.</h2>
+          <ul class="expertise-grid">
+            <li class="expertise-item" style="--expertise-order:0"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7Z"/><path d="m8 12 3 3 5-6"/></svg></span><h3>Underwriting</h3><p>Assess Risk. Inform Pricing.</p></li>
+            <li class="expertise-item" style="--expertise-order:1"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3h8l4 4v14H4V3Z"/><path d="M15 3v5h5M8 12h8M8 16h5"/></svg></span><h3>Claims</h3><p>Prioritize Files. Monitor Exposure.</p></li>
+            <li class="expertise-item" style="--expertise-order:2"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 9 1 1 2-2m-3 7 1 1 2-2M14 9h2m-2 6h2"/></svg></span><h3>Governance</h3><p>Trace Decisions. Preserve Evidence.</p></li>
+            <li class="expertise-item" style="--expertise-order:3"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3h6m-5 0v7l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3M8 15h8"/></svg></span><h3>Research</h3><p>Test Models. Explain Predictions.</p></li>
+          </ul>
+          <a class="expertise-link" href="#projects">Explore My Projects <span aria-hidden="true">↗</span></a>
+        </aside>
       </div>
     </section>
 
