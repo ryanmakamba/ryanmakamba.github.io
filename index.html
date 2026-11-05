@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261105-uniform-spacing">
+  <link rel="stylesheet" href="styles.css?v=20261105-welcome-motion">
   <script src="script.js?v=20261104-case-toc-click" defer></script>
   <script>
     // Repeat visits get a shorter entrance; storage restrictions never block the page.
@@ -58,10 +58,10 @@
 
         <aside class="hero-visual expertise-card intro-enter intro-snapshot" aria-label="Areas of expertise">
           <ul class="expertise-grid">
-            <li class="expertise-item" style="--expertise-order:0"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7Z"/><path d="m8 12 3 3 5-6"/></svg></span><h3>Underwriting</h3><p>Assess Risk. Inform Pricing.</p></li>
-            <li class="expertise-item" style="--expertise-order:1"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3h8l4 4v14H4V3Z"/><path d="M15 3v5h5M8 12h8M8 16h5"/></svg></span><h3>Claims</h3><p>Prioritize Files. Monitor Exposure.</p></li>
-            <li class="expertise-item" style="--expertise-order:2"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 9 1 1 2-2m-3 7 1 1 2-2M14 9h2m-2 6h2"/></svg></span><h3>Governance</h3><p>Trace Decisions. Preserve Evidence.</p></li>
-            <li class="expertise-item" style="--expertise-order:3"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3h6m-5 0v7l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3M8 15h8"/></svg></span><h3>Research</h3><p>Test Models. Explain Predictions.</p></li>
+            <li class="expertise-item" style="--expertise-order:0"><a class="expertise-area-link" href="#project-underwriting"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7Z"/><path d="m8 12 3 3 5-6"/></svg></span><h3>Underwriting</h3><p>Assess Risk. Inform Pricing.</p></a></li>
+            <li class="expertise-item" style="--expertise-order:1"><a class="expertise-area-link" href="#project-claims"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3h8l4 4v14H4V3Z"/><path d="M15 3v5h5M8 12h8M8 16h5"/></svg></span><h3>Claims</h3><p>Prioritize Files. Monitor Exposure.</p></a></li>
+            <li class="expertise-item" style="--expertise-order:2"><a class="expertise-area-link" href="#project-evidence"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 9 1 1 2-2m-3 7 1 1 2-2M14 9h2m-2 6h2"/></svg></span><h3>Governance</h3><p>Trace Decisions. Preserve Evidence.</p></a></li>
+            <li class="expertise-item" style="--expertise-order:3"><a class="expertise-area-link" href="#project-thesis"><span class="expertise-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3h6m-5 0v7l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3M8 15h8"/></svg></span><h3>Research</h3><p>Test Models. Explain Predictions.</p></a></li>
           </ul>
           <a class="expertise-link" href="#projects">Explore My Projects <span aria-hidden="true">↗</span></a>
         </aside>
@@ -134,13 +134,13 @@
       <div class="container projects-shell">
         <div class="section-heading reveal"><h2>Featured Projects</h2></div>
         <div class="project-bento">
-          <article class="bento-project bento-project--underwriting reveal" data-project="underwriting">
+          <article class="bento-project bento-project--underwriting reveal" data-project="underwriting" id="project-underwriting">
             <div class="bento-copy"><p class="project-label">01 · Insurance analytics</p><h3>Aegis Underwriting Command Center</h3><p>A multi-line P&amp;C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.</p><div class="tags"><span>Risk Scoring</span><span>Pricing Analytics</span><span>P&amp;C Insurance</span></div><div class="project-actions"><a class="project-action project-action--primary" href="#project/aegis-underwriting" data-case-action="underwriting">View Case Study</a><button class="project-action" type="button" onclick="window.location.assign('/?launch=underwriting')">Open Live Project ↗</button></div></div>
           </article>
-          <article class="bento-project bento-project--claims reveal" data-project="claims">
+          <article class="bento-project bento-project--claims reveal" data-project="claims" id="project-claims">
             <div class="bento-copy"><p class="project-label">02 · Claims operations</p><h3>Aegis Claims Intelligence Center</h3><p>An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.</p><div class="tags"><span>Claims Analytics</span><span>Fraud Indicators</span><span>Reserve Monitoring</span></div><div class="project-actions"><a class="project-action project-action--primary" href="#project/aegis-claims" data-case-action="claims">View Case Study</a><button class="project-action" type="button" onclick="window.location.assign('/?launch=claims')">Open Live Project ↗</button></div></div>
           </article>
-          <article class="bento-project bento-project--evidence reveal" data-project="evidence">
+          <article class="bento-project bento-project--evidence reveal" data-project="evidence" id="project-evidence">
             <div class="bento-visual illustration-visual preview-frame evidence-illustration" aria-label="Evidence governance workflow preview">
               <img class="illustration-dashboard-bg" src="/aegis-evidence-cover.png" loading="lazy" alt="" aria-hidden="true">
               <svg class="project-illustration" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="evidence-title evidence-desc">
@@ -170,7 +170,7 @@
           </article>
         </div>
 
-        <article class="project-card thesis-project reveal">
+        <article class="project-card thesis-project reveal" id="project-thesis">
           <div class="project-art thesis-art" aria-hidden="true"><strong>MODEL<br>EXPLAINABILITY</strong><small>Performance · Fairness · Governance</small></div>
           <div class="project-content"><p class="project-label">04 · Master’s thesis</p><h3>Balancing Predictive Performance and Explainability in Insurance Underwriting</h3><p>Research examining how underwriting models can improve predictive performance while remaining transparent, fair and suitable for defensible insurance decisions.</p><ul><li>Comparing traditional statistical and machine-learning underwriting models across predictive performance, calibration, fairness and interpretability.</li><li>Using Python, Scikit-learn and XGBoost to compare models, MLflow to track experiments, and SHAP to assess risk drivers, transparency and fairness.</li></ul><div class="tags"><span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span><span>SHAP</span></div><div class="project-actions"><a class="project-action project-action--primary" href="/Thesis-Proposal.pdf" target="_blank" rel="noopener noreferrer" aria-label="View thesis case study PDF (opens in a new tab)">View Case Study</a></div></div>
         </article>

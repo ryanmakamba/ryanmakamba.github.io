@@ -506,3 +506,36 @@ body > footer .footer-grid { display:flex; justify-content:center; text-align:ce
   main > #contact { padding-top:24px; }
   main .section-heading { margin-bottom:24px; }
 }
+
+
+/* Coordinated welcome: 1.2 seconds, no overlay or scroll lock. */
+@keyframes welcome-rise {
+  from { opacity:0; transform:translateY(16px); }
+  to { opacity:1; transform:translateY(0); }
+}
+#home .expertise-item { padding:0; }
+#home .expertise-item:nth-child(even) { padding:0; }
+#home .expertise-area-link {
+  display:block; height:100%; padding:20px 12px; border-radius:8px;
+  outline-offset:-3px; transition:transform 220ms var(--ease),background-color 220ms var(--ease),box-shadow 220ms var(--ease);
+}
+#home .expertise-area-link:hover, #home .expertise-area-link:focus-visible {
+  background:var(--accent-soft); box-shadow:inset 0 0 0 1px var(--accent);
+}
+[id^="project-"] { scroll-margin-top:100px; }
+@media(prefers-reduced-motion:no-preference) {
+  .site-header { animation:welcome-rise 360ms var(--ease) both; }
+  #home .intro-line-one { animation:welcome-rise 520ms var(--ease) 100ms both; }
+  #home .intro-description { animation:welcome-rise 480ms var(--ease) 220ms both; }
+  #home .intro-actions { animation:welcome-rise 480ms var(--ease) 320ms both; }
+  #home .intro-snapshot { animation:welcome-rise 450ms var(--ease) 240ms both; }
+  #home .expertise-item { animation:welcome-rise 480ms var(--ease) calc(400ms + var(--expertise-order)*100ms) both; }
+  .intro-return #home .intro-enter { animation-duration:300ms; animation-delay:60ms; }
+  .intro-return #home .expertise-item { animation-duration:300ms; animation-delay:calc(100ms + var(--expertise-order)*50ms); }
+  #home .expertise-area-link:hover { transform:translateY(-3px); }
+  #home .intro-actions:focus-within, #home .expertise-item:focus-within, #home .intro-snapshot:focus-within { animation:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .site-header, #home .intro-enter, #home .expertise-item { animation:none!important; opacity:1; transform:none; }
+  #home .expertise-area-link { transition:none; transform:none; }
+}
