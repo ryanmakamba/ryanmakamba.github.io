@@ -76,8 +76,22 @@ const countObserver = new IntersectionObserver(entries => {
 }, { threshold: .65 });
 counters.forEach(counter => countObserver.observe(counter));
 
-const track = document.querySelector('.marquee-track');
-if (track && !reduceMotion) track.innerHTML += track.innerHTML;
+// Repeat each row independently; copies stay out of the accessibility tree.
+document.querySelectorAll('.marquee-track').forEach(track => {
+  if (reduceMotion) return;
+  [...track.children].forEach(tool => {
+    const copy = tool.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    copy.dataset.toolDuplicate = '';
+    track.appendChild(copy);
+  });
+});
+const toolsRegion = document.querySelector('.tools-rows');
+if (toolsRegion && !reduceMotion && 'IntersectionObserver' in window) {
+  new IntersectionObserver(entries => {
+    toolsRegion.classList.toggle('tools-offscreen', !entries[0].isIntersecting);
+  }).observe(toolsRegion);
+}
 
 
 /* Featured projects bento interactions and deep-linked case studies */

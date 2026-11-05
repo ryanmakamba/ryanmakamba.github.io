@@ -539,3 +539,18 @@ body > footer .footer-grid { display:flex; justify-content:center; text-align:ce
   .site-header, #home .intro-enter, #home .expertise-item { animation:none!important; opacity:1; transform:none; }
   #home .expertise-area-link { transition:none; transform:none; }
 }
+
+/* Two matching tool rows, full-color marks on white tiles. */
+.tools-rows { display:grid; gap:8px; }
+.tools-rows .marquee-track { gap:16px; padding:8px; animation-duration:52s; }
+.tools-rows .marquee-track--reverse { animation-direction:reverse; animation-duration:58s; }
+.tools-rows .tool { flex:0 0 auto; min-width:200px; min-height:80px; padding:16px 24px; gap:16px; }
+.tools-rows .tool img { width:40px; height:40px; padding:4px; background:#fff; border-radius:6px; object-fit:contain; opacity:1; filter:none; mix-blend-mode:normal; }
+.tools-rows .tool img[src$="ellucian.svg"] { width:88px; }
+.tools-rows:hover .marquee-track, .tools-rows:focus-within .marquee-track,
+.tools-offscreen .marquee-track { animation-play-state:paused; }
+@media(prefers-reduced-motion:reduce) {
+ .tools-rows .marquee { overflow:visible; mask-image:none; }
+ .tools-rows .marquee-track { animation:none; width:auto; flex-wrap:wrap; justify-content:center; }
+ .tools-rows [data-tool-duplicate] { display:none; }
+}
