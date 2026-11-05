@@ -421,3 +421,41 @@ main > #contact { padding-top:24px; }
   .hero-grid { gap:24px; }
   .footer-grid { grid-template-columns:1fr; gap:16px; }
 }
+
+
+/* Editorial welcome: content is visible without JavaScript; no loading gate. */
+#home .hero-grid { grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr); gap:clamp(24px,4vw,56px); }
+#home .intro-eyebrow { max-width:550px; font-size:11px; line-height:1.8; letter-spacing:.12em; }
+#home .intro-greeting { margin:0 0 16px; font-size:clamp(18px,2vw,24px); font-weight:600; }
+#home .intro-headline { font-size:clamp(36px,4.5vw,60px); line-height:1.08; letter-spacing:-.045em; margin:0 0 24px; }
+#home .intro-headline > span { display:block; }
+#home .intro-headline em { font-style:normal; color:var(--accent); }
+#home .hero-lede { max-width:540px; font-size:clamp(16px,1.5vw,18px); line-height:1.75; margin-bottom:0; }
+#home .button-row { margin-top:24px; }
+@keyframes intro-arrive { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+@media(prefers-reduced-motion:no-preference) {
+  .site-header { animation:intro-arrive 400ms var(--ease) both; }
+  #home .intro-enter { animation:intro-arrive 520ms var(--ease) both; }
+  #home .intro-eyebrow { animation-delay:80ms; }
+  #home .intro-greeting { animation-delay:140ms; }
+  #home .intro-line-one { animation-delay:220ms; }
+  #home .intro-line-two { animation-delay:320ms; }
+  #home .intro-description { animation-delay:420ms; }
+  #home .intro-actions { animation-delay:500ms; }
+  #home .intro-snapshot { animation-delay:360ms; }
+  .intro-return #home .intro-enter { animation-duration:300ms; animation-delay:60ms; }
+  #home .intro-actions:focus-within { animation:none; }
+}
+@media(max-width:900px) {
+  #home .hero-grid { grid-template-columns:1fr; }
+  #home .hero-copy { max-width:680px; }
+  #home .intro-headline { font-size:clamp(36px,6.6vw,60px); }
+  #home .hero-visual { width:100%; max-width:560px; justify-self:start; }
+}
+@media(max-width:480px) {
+  #home .intro-headline { font-size:clamp(32px,8.5vw,40px); letter-spacing:-.035em; }
+  #home .intro-eyebrow { max-width:300px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #home .intro-enter, .site-header { animation:none; opacity:1; transform:none; }
+}
