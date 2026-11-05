@@ -396,3 +396,28 @@ body.has-case-open .site-header{display:none}
 @media(max-width:850px) { #contact .contact-split { grid-template-columns:1fr; gap:32px; border-bottom-right-radius:48px; } #contact .contact-copy h2 { font-size:clamp(38px,7vw,60px); } #contact .contact-intro { max-width:600px; margin-bottom:24px; } }
 @media(max-width:480px) { #contact .contact-split { padding:28px 20px; border-radius:20px 20px 40px 20px; } #contact .contact-form { padding:20px 16px; border-radius:18px; } #contact .contact-intro { font-size:16px; } }
 @media(prefers-reduced-motion:reduce) { #contact .contact-send { transition:none; transform:none!important; } }
+
+/* Content-led vertical rhythm: no viewport-height hero or leftover stats gap. */
+:root { --space-section:clamp(44px,5vw,72px); }
+main > .section { padding-block:var(--space-section); }
+main > .hero { min-height:0; padding-top:clamp(40px,5vw,72px); padding-bottom:clamp(36px,4vw,56px); }
+main > #about { padding-top:clamp(28px,3vw,44px); }
+.section-heading { margin-bottom:clamp(24px,3vw,40px); gap:24px; }
+.hero-grid { gap:clamp(24px,4vw,56px); }
+.education-grid { gap:clamp(24px,4vw,56px); }
+.pull-quote { margin-top:clamp(24px,3vw,40px); padding:clamp(24px,4vw,48px); }
+.pull-quote small { margin-top:20px; }
+.thesis-project .project-art { min-height:0; padding:28px; }
+main > #contact { padding-top:24px; }
+.footer-grid { grid-template-columns:minmax(0,1fr) auto; gap:24px; }
+@media(max-width:900px) {
+  .education-grid { gap:24px; }
+  .thesis-project .project-art { min-height:0; padding:24px; }
+  .footer-grid > p:last-child { grid-column:auto; }
+}
+@media(max-width:600px) {
+  :root { --space-section:40px; }
+  .section-heading { margin-bottom:24px; }
+  .hero-grid { gap:24px; }
+  .footer-grid { grid-template-columns:1fr; gap:16px; }
+}
