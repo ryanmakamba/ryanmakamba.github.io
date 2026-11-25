@@ -147,7 +147,7 @@ const caseProjects = [
     domain: 'Claims Operations',
     status: 'Live',
     data: 'Synthetic',
-    url: 'https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/',
+    url: 'https://aegis-claims-intelligence-center.vercel.app/',
     overview: 'An operational claims workspace that monitors severity, reserve adequacy, aging pressure, fraud indicators, and leakage exposure across personal and commercial lines.',
     challenge: 'Claims leakage rarely comes from one big mistake. It is built through reserves that lag real exposure, files that age past their window, and patterns that only look suspicious in context. By the time it shows in the financials, it is costly to reverse.',
     objectives: [

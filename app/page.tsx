@@ -37,7 +37,7 @@ const projects: Project[] = [
     description:
       "An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.",
     tags: ["Claims Analytics", "Fraud Indicators", "Reserve Monitoring"],
-    href: "https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/",
+    href: "https://aegis-claims-intelligence-center.vercel.app/",
     image: "/aegis-claims-cover.png",
   },
   {
