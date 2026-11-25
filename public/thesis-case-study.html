@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" class="thesis-page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ryan Makamba’s master’s thesis proposal on predictive performance, calibration, fairness and explainability in insurance underwriting.">
+  <title>Balancing Predictive Performance and Explainability in Insurance Underwriting | Ryan Makamba</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css?v=20261105-two-tool-rows">
+  <style>
+    .thesis-header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .thesis-shell {
+      width: min(calc(100% - 2.5rem), 69rem);
+      margin-inline: auto;
+    }
+
+    .thesis-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1rem;
+    }
+
+    .thesis-return {
+      font-size: .875rem;
+      font-weight: 750;
+    }
+
+    .thesis-byline, .thesis-type, .thesis-keywords {
+      color: var(--muted);
+      font-size: .875rem;
+    }
+
+    .thesis-hero {
+      padding-block: clamp(2.75rem, 7vw, 5rem);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .thesis-hero h1 {
+      font: 700 clamp(2.45rem, 5.8vw, 5.1rem)/1.02 Georgia, serif;
+      letter-spacing: -.045em;
+      max-width: 18ch;
+      margin: 0 0 1.25rem;
+      text-wrap: balance;
+      overflow-wrap: break-word;
+    }
+
+    .thesis-hero .kicker {
+      color: var(--ink);
+    }
+
+    .thesis-byline {
+      margin: 0 0 1.5rem;
+    }
+
+    .thesis-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+      gap: clamp(2rem, 7vw, 6rem);
+      align-items: start;
+      padding-block: 2.5rem 4rem;
+    }
+
+    .thesis-toc {
+      position: sticky;
+      top: 1.5rem;
+      padding: 1rem 1.25rem;
+      max-height: calc(100vh - 3rem);
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .thesis-toc summary {
+      color: var(--ink);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .thesis-toc nav {
+      display: block;
+    }
+
+    .thesis-toc ul {
+      margin: .6rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .thesis-toc a {
+      display: block;
+      padding: .35rem 0;
+    }
+
+    .thesis-content {
+      max-width: 72ch;
+      font: 1.15rem/1.72 Georgia, serif;
+    }
+
+    .thesis-content h2 {
+      margin: 2.5rem 0 .85rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      font: 700 clamp(1.6rem, 3.4vw, 2.2rem)/1.15 Georgia, serif;
+      letter-spacing: -.025em;
+      scroll-margin-top: 1rem;
+    }
+
+    .thesis-content h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border: 0;
+    }
+
+    .thesis-content h3 {
+      margin: 1.65rem 0 .6rem;
+      font: 750 1rem/1.4 "Plus Jakarta Sans", Arial, sans-serif;
+    }
+
+    .thesis-content p {
+      margin-bottom: 1rem;
+    }
+
+    .thesis-content li + li {
+      margin-top: .55rem;
+    }
+
+    .thesis-content .thesis-keywords {
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    }
+
+    .thesis-footer {
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--line);
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    }
+
+    .thesis-page {
+      scroll-padding-top: 1rem;
+    }
+
+    @media (max-width: 740px) {
+      .thesis-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .thesis-toc {
+        position: static;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to article</a>
+  <header class="thesis-header">
+    <div class="thesis-shell thesis-bar">
+      <a class="thesis-return" href="/#project-thesis">← Back to portfolio</a>
+      <span class="thesis-type">Research bulletin</span>
+    </div>
+  </header>
+  <main class="thesis-shell" id="article">
+    <article>
+      <header class="thesis-hero">
+        <p class="kicker">Master’s thesis proposal</p>
+        <h1>Balancing Predictive Performance and Explainability in Insurance Underwriting</h1>
+        <p class="thesis-byline"><strong>Ryan Makamba</strong> · Quinnipiac University</p>
+        <a class="button" href="/Thesis-Proposal.pdf" download>Download thesis proposal (PDF) <span aria-hidden="true">↓</span></a>
+      </header>
+      <div class="thesis-layout">
+        <details class="thesis-toc" open>
+          <summary>In this article</summary>
+          <nav aria-label="Article sections">
+            <ul>
+          <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#introduction-and-background">1. Introduction and Background</a></li>
+          <li><a href="#problem-statement">2. Problem Statement</a></li>
+          <li><a href="#research-gap">3. Research Gap</a></li>
+          <li><a href="#research-aim">4. Research Aim</a></li>
+          <li><a href="#research-objectives">5. Research Objectives</a></li>
+          <li><a href="#research-questions">6. Research Questions</a></li>
+          <li><a href="#significance-of-the-study">7. Significance of the Study</a></li>
+          <li><a href="#proposed-methodology">8. Proposed Methodology</a></li>
+          <li><a href="#expected-outputs">9. Expected Outputs</a></li>
+          <li><a href="#scope-and-limitations">10. Scope and Limitations</a></li>
+          <li><a href="#conclusion">11. Conclusion</a></li>
+            </ul>
+          </nav>
+        </details>
+        <div class="thesis-content">
+      <h2 id="abstract">Abstract</h2>
+      <p>Insurance underwriting requires models that produce reliable risk estimates while supporting understandable and accountable decisions. Although machine-learning methods offer flexible approaches to modeling complex relationships, their practical value must be assessed alongside calibration, interpretability and fairness. This study proposes a comparative evaluation of traditional statistical models and machine-learning approaches for an insurance underwriting risk-assessment task. Python, Scikit-learn and XGBoost will support model development, MLflow will document experiments and model versions, and SHAP will support the examination of model predictions. The study will assess predictive performance, the correspondence between predicted and observed outcomes, differences across relevant applicant groups, and the usefulness and limitations of model explanations. Its intended contribution is a reproducible evaluation framework that helps determine whether increased model complexity provides sufficient practical value for underwriting use. The research does not assume that complex models necessarily outperform simpler alternatives or that explainability alone establishes fairness.</p>
+      <p class="thesis-keywords"><strong>Keywords</strong> insurance underwriting, predictive modeling, explainable artificial intelligence, calibration, fairness, model governance</p>
+      <h2 id="introduction-and-background">1. Introduction and Background</h2>
+      <p>Insurance underwriting involves evaluating risk and determining whether, and under what conditions, an insurer will provide coverage. Predictive models can support this process by estimating outcomes such as claim occurrence, claim frequency or expected loss. However, a prediction is only one component of an underwriting decision. Its practical usefulness also depends on the reliability of the estimate and the ability of decision-makers to examine its underlying reasoning.</p>
+      <p>Machine-learning methods provide ways to capture nonlinear relationships and interactions among predictors. XGBoost, for example, implements a scalable tree-boosting approach that can serve as a flexible alternative to traditional statistical models (Chen &amp; Guestrin, 2016). Its inclusion in this study will allow an empirical comparison rather than an assumption that additional complexity produces better underwriting predictions.</p>
+      <p>The distinction between interpretability and explanation is central to this research. An inherently interpretable model exposes aspects of its decision structure directly, whereas a post-hoc explanation describes the behavior of a fitted model. Rudin (2019) argues that interpretable alternatives deserve serious consideration in high-stakes settings and challenges the assumption that accuracy must be sacrificed for interpretability.</p>
+      <p>This study will therefore compare model families across multiple dimensions, examining both their predictive capabilities and the evidence needed to support their use in underwriting.</p>
+      <h2 id="problem-statement">2. Problem Statement</h2>
+      <p>The central problem is that a model’s statistical performance does not, by itself, establish its suitability for underwriting decisions.</p>
+      <p>A model may rank applicants effectively while producing risk estimates that do not correspond closely to observed outcomes. Calibration addresses this distinction by examining the reliability of predicted probabilities. Guo et al. (2017), although studying neural networks rather than insurance underwriting, demonstrate why calibration warrants evaluation separately from predictive accuracy.</p>
+      <p>Fairness presents a further challenge. In insurance pricing research, Lindholm et al. (2022) show that discrimination can arise directly through protected characteristics or indirectly through other variables that contain information about them. This provides a relevant foundation for examining potential disparities in underwriting risk models, while recognizing that pricing and underwriting decisions are distinct applications.</p>
+      <p>The study will address the practical question of how predictive performance, calibration, fairness and interpretability can be evaluated together when selecting an underwriting model.</p>
+      <h2 id="research-gap">3. Research Gap</h2>
+      <p>Existing research already examines explainability and fairness in insurance. The proposed contribution is therefore not the introduction of these concerns to the field.</p>
+      <p>Instead, this study addresses an applied evaluation gap: how to bring these dimensions together in a transparent comparison for a defined underwriting task. A single ranking based on predictive performance does not show whether a model offers reliable risk estimates, behaves consistently across relevant groups, or produces explanations that support meaningful review.</p>
+      <p>The study will operationalize these requirements within a common experimental framework. Its contribution will be a documented comparison showing where the models agree, where they differ and whether any predictive improvement is accompanied by practical limitations.</p>
+      <p>This is a proposed, context-specific contribution. The final dataset selection and a fuller literature review will determine how narrowly the research gap and originality claim should be stated.</p>
+      <h2 id="research-aim">4. Research Aim</h2>
+      <p>To evaluate how traditional statistical and machine-learning models balance predictive performance, calibration, fairness and explainability, and to develop a practical framework for selecting models that support transparent insurance underwriting.</p>
+      <h2 id="research-objectives">5. Research Objectives</h2>
+      <ol>
+        <li>Develop comparable models. Establish a traditional statistical baseline and selected machine-learning alternatives using consistent data preparation and evaluation procedures.</li>
+        <li>Evaluate predictive performance. Assess each model’s ability to predict the selected insurance outcome using appropriate measures.</li>
+        <li>Assess calibration. Examine whether predicted risks correspond to observed outcomes and whether recalibration improves their reliability.</li>
+        <li>Examine interpretability and explanations. Compare the direct interpretability of simpler models with SHAP-based explanations of more complex models.</li>
+        <li>Investigate group-level disparities. Evaluate differences in performance and outcomes across relevant groups where suitable data and sample sizes are available.</li>
+        <li>Identify model-selection trade-offs. Determine whether additional complexity provides meaningful benefits and document the conditions under which each approach may be preferable.</li>
+        <li>Support reproducibility. Record preprocessing choices, model configurations, evaluation results and model versions through a traceable experimental workflow.</li>
+      </ol>
+      <h2 id="research-questions">6. Research Questions</h2>
+      <ol>
+        <li>How do traditional statistical models compare with selected machine-learning approaches in predicting the chosen insurance outcome?</li>
+        <li>How do the models differ in calibration, and how does recalibration affect their performance?</li>
+        <li>What additional understanding do SHAP explanations provide about overall model behavior and individual predictions?</li>
+        <li>What differences in performance and outcomes emerge across relevant applicant groups?</li>
+        <li>Does increased model complexity provide sufficient predictive value to justify its interpretation and oversight requirements?</li>
+      </ol>
+      <h2 id="significance-of-the-study">7. Significance of the Study</h2>
+      <h3>7.1 Practical Significance</h3>
+      <p>The study aims to support model selection based on a broader assessment of underwriting usefulness. It will examine whether predictive improvements are substantial, whether risk estimates are reliable and whether model behavior can be reviewed effectively.</p>
+      <p>For underwriting teams, the intended benefit is a clearer account of what each model contributes and where human judgment remains necessary. For analytics teams, the study will provide a structured way to document modeling choices and communicate limitations.</p>
+      <h3>7.2 Significance for Explainability and Governance</h3>
+      <p>SHAP assigns feature contributions to individual predictions, providing a framework for examining how a model uses its inputs (Lundberg &amp; Lee, 2017). This study will use those contributions to investigate influential predictors and selected individual assessments. Explanations will be treated as evidence about model behavior, rather than proof that a decision is correct, fair or causally justified.</p>
+      <p>Experiment tracking and version documentation will also make the comparison easier to reproduce and review. Together, these practices are intended to connect model development with the evidence needed for informed oversight.</p>
+      <h3>7.3 Academic Significance</h3>
+      <p>The academic contribution will be an integrated empirical comparison within a defined insurance context. The study will examine whether trade-offs arise in the selected dataset rather than treating them as inevitable. It will also distinguish measurable predictive performance from the more context-dependent assessment of explanation quality.</p>
+      <h3>7.4 Significance for Applicants</h3>
+      <p>Examining group-level differences may reveal weaknesses concealed by aggregate metrics. The study seeks to identify such issues and document where further investigation is needed. It will not equate the absence of detected disparities with proof that a model is universally fair.</p>
+      <h2 id="proposed-methodology">8. Proposed Methodology</h2>
+      <h3>8.1 Research Design</h3>
+      <p>The study will adopt a quantitative comparative design. Models will be trained and evaluated on the same dataset using consistent experimental procedures.</p>
+      <p>For a manageable primary analysis, the proposed task is binary claim-occurrence prediction over a defined observation period, subject to dataset suitability. This would estimate a risk outcome relevant to underwriting rather than reproduce an insurer’s approval decisions.</p>
+      <p>The final dataset, insurance line and outcome definition will be specified before experimentation.</p>
+      <h3>8.2 Data Selection and Preparation</h3>
+      <p>The research will use a suitable public or appropriately de-identified insurance dataset. Predictor selection will be restricted to information available at the intended underwriting decision point.</p>
+      <p>Preparation will include assessing missing values, duplicates and inconsistent records; defining the outcome and observation period; identifying repeated policyholders or related records; encoding categorical variables and applying model-appropriate transformations; checking for leakage from information recorded after the prediction point; and examining outcome imbalance and group sample sizes.</p>
+      <p>Data will be divided into development and held-out test sets. Where records are related or time-dependent, the split will account for those relationships.</p>
+      <h3>8.3 Model Development</h3>
+      <p>The proposed comparison will include logistic regression as a statistical baseline for the binary outcome, a shallow decision tree as an additional interpretable benchmark, random forest as a tree-ensemble comparison, and XGBoost as a gradient-boosting comparison.</p>
+      <p>Python and Scikit-learn will support preprocessing and model development, with XGBoost used for the boosting model. Hyperparameter tuning will occur within the development data using cross-validation. Preprocessing will be fitted within training folds to preserve an independent evaluation.</p>
+      <h3>8.4 Predictive Performance Evaluation</h3>
+      <p>For the proposed binary outcome, evaluation will include ROC-AUC, precision–recall AUC, log loss and threshold-based measures such as precision and recall.</p>
+      <p>The analysis will distinguish probability estimation from decisions made at a particular threshold. Any threshold-based comparison will state the decision rule and the implications of false positives and false negatives.</p>
+      <p>Uncertainty estimates, such as bootstrap confidence intervals on held-out results, will help assess whether apparent differences are meaningful.</p>
+      <h3>8.5 Calibration Assessment</h3>
+      <p>Calibration will be examined through reliability diagrams, calibration intercept and slope, and the Brier score. The Brier score will be interpreted as an overall probabilistic performance measure rather than a pure measure of calibration.</p>
+      <p>Where justified, recalibration methods will be fitted using development data. The test set will remain untouched until final evaluation, and results will distinguish original predictions from recalibrated predictions.</p>
+      <h3>8.6 Explainability Analysis</h3>
+      <p>SHAP will support global summaries of feature contributions and local explanations for selected predictions. Case analysis will include both typical predictions and cases where models disagree.</p>
+      <p>The study will examine whether influential features are plausible in context and whether explanations remain reasonably stable across repeated fits. Correlated predictors and the choice of background data will be documented because they can affect interpretation.</p>
+      <p>Interpretability will not be reduced to the presence of a visualization. A structured assessment will consider model complexity, the clarity of individual explanations and the ability to trace how inputs affect predictions. Without a formal user study, conclusions will be limited to analytical usefulness rather than demonstrated improvements in underwriter understanding.</p>
+      <h3>8.7 Fairness Assessment</h3>
+      <p>Where appropriate group information is available, the study will compare group-level calibration, predictive performance and error rates. Threshold-based disparities will be interpreted in relation to the proposed decision context.</p>
+      <p>The assessment will distinguish descriptive disparities from conclusions about discrimination. It will also acknowledge that different fairness criteria may imply different judgments.</p>
+      <p>If suitable group data are unavailable, the study will report fairness assessment as a limitation rather than infer sensitive characteristics or claim that fairness has been established.</p>
+      <h3>8.8 Experiment Tracking and Reproducibility</h3>
+      <p>MLflow will record model parameters, metrics, artifacts and versions. Supporting documentation will capture dataset provenance, preprocessing decisions, validation procedures and known limitations.</p>
+      <p>The final comparison will present the models across separate evaluation dimensions. Any recommendation will explain how those dimensions were weighed rather than conceal the trade-offs within an unexplained composite score.</p>
+      <h2 id="expected-outputs">9. Expected Outputs</h2>
+      <ol>
+        <li>A documented data-preparation and validation workflow.</li>
+        <li>A comparison of statistical and machine-learning underwriting risk models.</li>
+        <li>Predictive performance and calibration results with uncertainty estimates.</li>
+        <li>Global and individual SHAP analyses.</li>
+        <li>A group-level disparity assessment, where supported by the data.</li>
+        <li>Reproducible experiment records and model documentation.</li>
+        <li>A practical model-selection framework explaining the strengths and limitations of each approach.</li>
+      </ol>
+      <p>These are intended deliverables, not completed findings.</p>
+      <h2 id="scope-and-limitations">10. Scope and Limitations</h2>
+      <p>The research will focus on one defined insurance risk-assessment task. Findings will depend on the dataset, population, observation period and selected predictors, and may not generalize to other insurance products.</p>
+      <p>Historical claims data may reflect previous underwriting decisions and may contain only accepted policyholders. Consequently, performance within an insured portfolio may not establish performance across the full applicant population.</p>
+      <p>Recorded claims may also be influenced by exposure, reporting behavior and policy conditions. These factors will need to be considered when defining and interpreting the target outcome.</p>
+      <p>SHAP explanations will describe fitted model behavior without establishing causality. Fairness assessment will be constrained by the available variables and sample sizes. Finally, a retrospective model comparison will not establish production readiness or demonstrate improved underwriting outcomes without further prospective validation.</p>
+      <h2 id="conclusion">11. Conclusion</h2>
+      <p>This research seeks to establish a defensible basis for comparing underwriting risk models across predictive performance, calibration, fairness and explainability. Its central question is whether additional model complexity produces useful improvements and whether those improvements can be supported by clear, reproducible evidence.</p>
+      <p>The intended outcome is a practical evaluation framework that helps connect statistical modeling choices with the requirements of underwriting review and accountable decision-making.</p>
+          <footer class="thesis-footer">
+            <a class="button" href="/Thesis-Proposal.pdf" download>Download thesis proposal (PDF) <span aria-hidden="true">↓</span></a>
+          </footer>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
